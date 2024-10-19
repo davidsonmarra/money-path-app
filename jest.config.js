@@ -1,5 +1,7 @@
 module.exports = {
-  verbose: false,
   preset: 'react-native',
-  setupFiles: ['./src/configs/jest.setup.js'],
+  setupFilesAfterEnv: ['./src/configs/jest.setup.js'],
+  transformIgnorePatterns: [
+    'node_modules/(?!(jest-)?@react-native|react-native|@react-native-community|@react-navigation|redux-persist|)',
+  ],
 };
