@@ -18,6 +18,16 @@ const getStyles = () =>
       fontWeight: 'bold',
       color: colors.text,
     },
+    buttonPrimary: {
+      fontSize: 16,
+      fontWeight: 'bold',
+      color: colors.buttonText,
+    },
+    buttonSecondary: {
+      fontSize: 16,
+      fontWeight: 'bold',
+      color: colors.secondary,
+    },
   });
 
 export default getStyles;

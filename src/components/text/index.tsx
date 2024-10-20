@@ -6,6 +6,8 @@ export enum TextType {
   title = 'title',
   text = 'text',
   textBold = 'textBold',
+  buttonPrimary = 'buttonPrimary',
+  buttonSecondary = 'buttonSecondary',
 }
 
 interface Props extends TextProps {
@@ -16,6 +18,8 @@ const textStyle = {
   [TextType.title]: getStyles().title,
   [TextType.text]: getStyles().text,
   [TextType.textBold]: getStyles().textBold,
+  [TextType.buttonPrimary]: getStyles().buttonPrimary,
+  [TextType.buttonSecondary]: getStyles().buttonSecondary,
 };
 
 const Text = ({children, type, style, ...rest}: Props) => {

@@ -33,3 +33,15 @@ export const TextBold: StoryObj<typeof Text> = {
     type: TextType.textBold,
   },
 };
+
+export const ButtonPrimary: StoryObj<typeof Text> = {
+  args: {
+    type: TextType.buttonPrimary,
+  },
+};
+
+export const ButtonSecondary: StoryObj<typeof Text> = {
+  args: {
+    type: TextType.buttonSecondary,
+  },
+};

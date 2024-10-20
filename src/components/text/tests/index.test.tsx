@@ -36,4 +36,16 @@ describe('Text', () => {
     const text = screen.getByRole('text');
     expect(text.props.style[0]).toStrictEqual(getStyles().textBold);
   });
+
+  it('renders buttonPrimary style correctly', () => {
+    renderComponent(TextType.buttonPrimary);
+    const text = screen.getByRole('text');
+    expect(text.props.style[0]).toStrictEqual(getStyles().buttonPrimary);
+  });
+
+  it('renders buttonSecondary style correctly', () => {
+    renderComponent(TextType.buttonSecondary);
+    const text = screen.getByRole('text');
+    expect(text.props.style[0]).toStrictEqual(getStyles().buttonSecondary);
+  });
 });

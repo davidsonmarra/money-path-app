@@ -6,4 +6,6 @@ export default {
   success: '#A6CD4E',
   title: '#FFF',
   text: '#D9D9D9',
+  disabled: '#4F4F4F',
+  buttonText: '#FFF',
 };
