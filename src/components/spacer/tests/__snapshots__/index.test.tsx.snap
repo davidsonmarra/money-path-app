@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Spacer renders correctly with default props 1`] = `
+<View
+  style={
+    {
+      "height": 0,
+      "width": 0,
+    }
+  }
+  testID="spacer"
+/>
+`;
