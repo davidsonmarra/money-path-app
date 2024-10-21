@@ -10,9 +10,11 @@ const getStyles = ({isDisabled}: Props) =>
     container: {
       width: '100%',
       height: 48,
-      justifyContent: 'center',
+      flexDirection: 'row',
+      justifyContent: 'space-between',
       alignItems: 'center',
-      padding: 12,
+      paddingVertical: 12,
+      paddingHorizontal: 24,
       borderRadius: 12,
       opacity: 1,
     },
