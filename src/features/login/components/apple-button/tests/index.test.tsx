@@ -1,12 +1,12 @@
 import React from 'react';
 import {render, screen} from '@testing-library/react-native';
-import Button from 'src/features/login/components/google-button';
+import Button from 'src/features/login/components/apple-button';
 
 interface Props {
   onPress?: () => void;
 }
 
-const mockText = 'Entrar com Google';
+const mockText = 'Entrar com Apple';
 
 const renderComponent = ({onPress}: Props) =>
   render(<Button onPress={onPress} />);

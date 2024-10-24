@@ -11,7 +11,7 @@ const AppleButton = ({onPress}: Props) => {
     <Button
       onPress={onPress}
       leftIcon={<AppleIcon size={28} />}
-      text="Entrar com conta Apple"
+      text="Entrar com Apple"
       style={getStyles().container}
     />
   );
