@@ -67,6 +67,33 @@ exports[`ProfileHeader renders correctly 1`] = `
       />
     </View>
     <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
       style={
         {
           "alignItems": "center",
@@ -74,9 +101,11 @@ exports[`ProfileHeader renders correctly 1`] = `
           "borderRadius": 24,
           "height": 48,
           "justifyContent": "center",
+          "opacity": 1,
           "width": 48,
         }
       }
+      testID="profile-image"
     >
       <Text
         style={

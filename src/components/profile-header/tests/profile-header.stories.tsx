@@ -5,6 +5,9 @@ import {ProfileHeader, StorybookView} from 'src/components';
 const ProfileHeaderMeta: Meta<typeof ProfileHeader> = {
   title: 'Components/ProfileHeader',
   component: ProfileHeader,
+  argTypes: {
+    onPressProfileImage: {action: 'pressed the button'},
+  },
   args: {
     name: 'John Doe',
     abbreviation: 'JD',

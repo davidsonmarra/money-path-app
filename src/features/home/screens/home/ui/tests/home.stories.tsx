@@ -6,7 +6,9 @@ const HomeContainerMeta: Meta<typeof HomeContainer> = {
   title: 'Screens/Home',
   component: HomeContainer,
   decorators: [Story => <Story />],
-  args: {},
+  argTypes: {
+    onPressProfileImage: {action: 'pressed the icon button'},
+  },
 };
 
 export default HomeContainerMeta;

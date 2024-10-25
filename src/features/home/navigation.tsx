@@ -2,13 +2,17 @@ import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import HomeScreen from 'src/features/home/screens/home';
 
-const {Navigator, Screen} = createStackNavigator();
+export type HomeStackParamList = {
+  HomeScreen: undefined;
+};
+
+const {Navigator, Screen} = createStackNavigator<HomeStackParamList>();
 
 const HomeStack = () => {
   return (
     <Navigator
       screenOptions={{
-        header: () => null,
+        headerShown: false,
       }}>
       <Screen name="HomeScreen" component={HomeScreen} />
     </Navigator>

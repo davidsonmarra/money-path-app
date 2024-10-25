@@ -8,7 +8,7 @@ const LoginStack = () => {
   return (
     <Navigator
       screenOptions={{
-        header: () => null,
+        headerShown: false,
       }}>
       <Screen name="LoginScreen" component={LoginScreen} />
     </Navigator>

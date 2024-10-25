@@ -2,10 +2,25 @@ import React from 'react';
 import {render} from 'src/configs/test-utils';
 import {ProfileHeader} from 'src/components';
 
-const renderComponent = ({name = '', abbreviation = ''}) =>
-  render(<ProfileHeader name={name} abbreviation={abbreviation} />);
+const mockOnPressProfileImage = jest.fn();
+const renderComponent = ({
+  name = '',
+  abbreviation = '',
+  onPressProfileImage = mockOnPressProfileImage,
+}) =>
+  render(
+    <ProfileHeader
+      name={name}
+      abbreviation={abbreviation}
+      onPressProfileImage={mockOnPressProfileImage}
+    />,
+  );
 
 describe('ProfileHeader', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
   it('renders correctly', () => {
     const tree = renderComponent({}).toJSON();
     expect(tree).toMatchSnapshot();
@@ -21,5 +36,11 @@ describe('ProfileHeader', () => {
     const abbreviation = 'JD';
     const profileHeader = renderComponent({abbreviation});
     expect(profileHeader.findByText(abbreviation)).toBeTruthy();
+  });
+
+  it('calls onPressProfileImage correctly', () => {
+    const profileHeader = renderComponent({});
+    profileHeader.getByTestId('profile-image').props.onClick();
+    expect(mockOnPressProfileImage).toHaveBeenCalledTimes(1);
   });
 });
