@@ -4,7 +4,7 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 import {Text, TextType, Spacer} from 'src/components';
 import {MoneyPathIcon} from 'src/assets/icons';
 import {AppleButton, GoogleButton} from 'src/features/login/components';
-import getStyles from 'src/features/login/screens/login/ui/styles';
+import useStyles from 'src/features/login/screens/login/ui/styles';
 
 interface Props {
   loginWithGoogle: () => void;
@@ -28,8 +28,8 @@ const renderButtonsIOS = (
 
 const LoginContainer = ({loginWithApple, loginWithGoogle}: Props) => {
   return (
-    <SafeAreaView style={getStyles().container}>
-      <View style={getStyles().logoContainer}>
+    <SafeAreaView style={useStyles().container}>
+      <View style={useStyles().logoContainer}>
         <MoneyPathIcon size={72} />
       </View>
       <Text type={TextType.text}>

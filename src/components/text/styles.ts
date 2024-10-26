@@ -1,8 +1,10 @@
 import {StyleSheet} from 'react-native';
-import {colors} from 'src/configs/theme';
+import {useTheme} from 'src/hooks/theme';
 
-const getStyles = () =>
-  StyleSheet.create({
+const useStyles = () => {
+  const {colors} = useTheme().theme;
+
+  return StyleSheet.create({
     title: {
       fontSize: 24,
       fontWeight: 'bold',
@@ -29,5 +31,6 @@ const getStyles = () =>
       color: colors.secondary,
     },
   });
+};
 
-export default getStyles;
+export default useStyles;

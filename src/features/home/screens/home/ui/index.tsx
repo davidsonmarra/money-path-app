@@ -1,7 +1,7 @@
 import React from 'react';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {ProfileHeader} from 'src/components';
-import getStyles from 'src/features/home/screens/home/ui/styles';
+import useStyles from 'src/features/home/screens/home/ui/styles';
 
 interface Props {
   onPressProfileImage: () => void;
@@ -15,7 +15,7 @@ const HomeContainer = ({onPressProfileImage}: Props) => {
         abbreviation="DY"
         onPressProfileImage={onPressProfileImage}
       />
-      <SafeAreaView style={getStyles().container}></SafeAreaView>
+      <SafeAreaView style={useStyles().container}></SafeAreaView>
     </>
   );
 };

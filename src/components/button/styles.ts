@@ -1,12 +1,14 @@
 import {StyleSheet} from 'react-native';
-import {colors} from '../../configs/theme';
+import {useTheme} from 'src/hooks/theme';
 
 interface Props {
   isDisabled: boolean;
 }
 
-const getStyles = ({isDisabled}: Props) =>
-  StyleSheet.create({
+const useStyles = ({isDisabled}: Props) => {
+  const {colors} = useTheme().theme;
+
+  return StyleSheet.create({
     container: {
       width: '100%',
       height: 48,
@@ -23,5 +25,6 @@ const getStyles = ({isDisabled}: Props) =>
     },
     secondary: {},
   });
+};
 
-export default getStyles;
+export default useStyles;

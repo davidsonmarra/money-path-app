@@ -5,9 +5,9 @@ import {
   TouchableOpacityProps,
   View,
 } from 'react-native';
-import {colors} from 'src/configs/theme';
 import Text, {TextType} from 'src/components/text';
-import getStyles from 'src/components/button/styles';
+import useStyles from 'src/components/button/styles';
+import {useTheme} from 'src/hooks/theme';
 
 export enum ButtonType {
   primary = 'primary',
@@ -24,11 +24,11 @@ export interface Props extends TouchableOpacityProps {
 
 const buttonProps = (isDisabled: boolean) => ({
   [ButtonType.primary]: {
-    buttonStyle: getStyles({isDisabled}).primary,
+    buttonStyle: useStyles({isDisabled}).primary,
     textType: TextType.buttonPrimary,
   },
   [ButtonType.secondary]: {
-    buttonStyle: getStyles({isDisabled}).secondary,
+    buttonStyle: useStyles({isDisabled}).secondary,
     textType: TextType.buttonSecondary,
   },
 });
@@ -42,11 +42,13 @@ const Button = ({
   style,
   ...rest
 }: Props) => {
+  const {colors} = useTheme().theme;
+
   return (
     <TouchableOpacity
       disabled={isDisabled || isLoading}
       style={[
-        getStyles({isDisabled}).container,
+        useStyles({isDisabled}).container,
         buttonProps(isDisabled)[type].buttonStyle,
         style,
       ]}

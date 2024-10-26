@@ -1,8 +1,10 @@
 import {StyleSheet} from 'react-native';
-import {colors} from 'src/configs/theme';
+import {useTheme} from 'src/hooks/theme';
 
-const getStyles = () =>
-  StyleSheet.create({
+const useGetStyles = () => {
+  const {colors} = useTheme().theme;
+
+  return StyleSheet.create({
     container: {
       flex: 1,
       justifyContent: 'center',
@@ -10,5 +12,6 @@ const getStyles = () =>
       backgroundColor: colors.background,
     },
   });
+};
 
-export default getStyles;
+export default useGetStyles;

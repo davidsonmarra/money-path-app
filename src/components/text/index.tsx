@@ -1,6 +1,6 @@
 import React from 'react';
 import {Text as RNText, TextProps} from 'react-native';
-import getStyles from 'src/components/text/styles';
+import useStyles from 'src/components/text/styles';
 
 export enum TextType {
   title = 'title',
@@ -14,15 +14,15 @@ interface Props extends TextProps {
   type: TextType;
 }
 
-const textStyle = {
-  [TextType.title]: getStyles().title,
-  [TextType.text]: getStyles().text,
-  [TextType.textBold]: getStyles().textBold,
-  [TextType.buttonPrimary]: getStyles().buttonPrimary,
-  [TextType.buttonSecondary]: getStyles().buttonSecondary,
-};
-
 const Text = ({children, type, style, ...rest}: Props) => {
+  const textStyle = {
+    [TextType.title]: useStyles().title,
+    [TextType.text]: useStyles().text,
+    [TextType.textBold]: useStyles().textBold,
+    [TextType.buttonPrimary]: useStyles().buttonPrimary,
+    [TextType.buttonSecondary]: useStyles().buttonSecondary,
+  };
+
   return (
     <RNText style={[textStyle[type], style]} {...rest}>
       {children}

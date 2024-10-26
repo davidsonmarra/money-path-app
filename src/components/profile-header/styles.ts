@@ -1,8 +1,10 @@
 import {StyleSheet} from 'react-native';
-import {colors} from 'src/configs/theme';
+import {useTheme} from 'src/hooks/theme';
 
-const getStyles = () =>
-  StyleSheet.create({
+const useStyles = () => {
+  const {colors} = useTheme().theme;
+
+  return StyleSheet.create({
     container: {
       width: '100%',
       flexDirection: 'row',
@@ -27,5 +29,6 @@ const getStyles = () =>
       alignItems: 'center',
     },
   });
+};
 
-export default getStyles;
+export default useStyles;
