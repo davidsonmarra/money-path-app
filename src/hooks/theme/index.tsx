@@ -1,4 +1,6 @@
 import React, {createContext, useState, useEffect, useContext} from 'react';
+import {useColorScheme} from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import themes from 'src/configs/theme';
 
 export interface ThemeProviderProps {
@@ -15,14 +17,41 @@ const ThemeContext = createContext<ThemeContextReturn | null>(null);
 
 const ThemeProvider = ({children}: ThemeProviderProps) => {
   const [isDark, setIsDark] = useState(false);
+  const isDarkMode = useColorScheme() === 'dark';
 
-  const toggleTheme = () => {
+  const toggleTheme = async () => {
+    await AsyncStorage.setItem(
+      '@moneypath:isDarkMode',
+      JSON.stringify({
+        isDarkMode: !isDark,
+      }),
+    );
     setIsDark(!isDark);
   };
   const theme = isDark ? themes.dark : themes.light;
 
+  const initializingTheme = async () => {
+    try {
+      const isDarkStoraged = await AsyncStorage.getItem(
+        '@moneypath:isDarkMode',
+      );
+      if (isDarkStoraged === null) throw new Error('isDarkStoraged is null');
+
+      AsyncStorage.setItem(
+        '@moneypath:isDarkMode',
+        JSON.stringify({isDarkMode}),
+      );
+      setIsDark(JSON.parse(isDarkStoraged).isDarkMode);
+    } catch (error) {
+      AsyncStorage.setItem(
+        '@moneypath:isDarkMode',
+        JSON.stringify({isDarkMode: false}),
+      );
+    }
+  };
+
   useEffect(() => {
-    // setIsDark(isDark);
+    initializingTheme();
   }, []);
 
   return (
