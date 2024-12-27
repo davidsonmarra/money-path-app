@@ -1,5 +1,5 @@
 import React from 'react';
-import auth from '@react-native-firebase/auth';
+import auth, {firebase} from '@react-native-firebase/auth';
 import {GoogleSignin} from '@react-native-google-signin/google-signin';
 import LoginContainer from 'src/features/login/screens/login/ui';
 
@@ -15,7 +15,7 @@ async function onGoogleButtonPress() {
 
   const googleCredential = auth.GoogleAuthProvider.credential(idToken);
 
-  return auth().signInWithCredential(googleCredential);
+  await firebase.auth().signInWithCredential(googleCredential);
 }
 
 const LoginScreen = () => {

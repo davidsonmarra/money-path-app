@@ -1,4 +1,5 @@
 import '@testing-library/react-native/extend-expect';
+import {mockGoogleSignIn} from 'src/__mocks__';
 
 jest.useFakeTimers();
 
@@ -21,4 +22,20 @@ jest.mock('src/hooks/theme', () => ({
     theme: mockTheme,
     dark: true,
   }),
+}));
+
+jest.mock('@react-native-firebase/auth', () => ({
+  firebase: {
+    auth: () => ({
+      signInWithCredential: jest.fn(),
+      signOut: jest.fn(),
+    }),
+  },
+  GoogleAuthProvider: {
+    credential: jest.fn(),
+  },
+}));
+
+jest.mock('@react-native-google-signin/google-signin', () => ({
+  GoogleSignin: mockGoogleSignIn,
 }));

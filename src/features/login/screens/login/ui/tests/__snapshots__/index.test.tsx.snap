@@ -267,6 +267,7 @@ exports[`LoginContainer should render correctly 1`] = `
             "width": "100%",
           }
         }
+        testID="btn-google"
       >
         <View>
           <RNSVGSvgView

@@ -14,6 +14,7 @@ const GoogleButton = ({onPress}: Props) => {
       text="Entrar com Google"
       style={getStyles().container}
       type={ButtonType.secondary}
+      testID="btn-google"
     />
   );
 };
