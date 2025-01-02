@@ -47,11 +47,14 @@ exports[`ProfileHeader renders correctly 1`] = `
               "fontSize": 16,
               "fontWeight": "normal",
             },
-            undefined,
+            {
+              "color": undefined,
+            },
           ]
         }
       >
-        Olá, 
+        Olá,
+         
       </Text>
       <Text
         style={
@@ -61,7 +64,9 @@ exports[`ProfileHeader renders correctly 1`] = `
               "fontSize": 16,
               "fontWeight": "bold",
             },
-            undefined,
+            {
+              "color": undefined,
+            },
           ]
         }
       />

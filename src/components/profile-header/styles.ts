@@ -13,6 +13,9 @@ const useStyles = () => {
       paddingVertical: 16,
       backgroundColor: colors.secondary,
     },
+    textColor: {
+      color: colors.textOnSecondary,
+    },
     profileImage: {
       width: 48,
       height: 48,

@@ -11,11 +11,17 @@ interface Props extends SafeAreaViewProps {
 }
 
 const ProfileHeader = ({name, abbreviation, onPressProfileImage}: Props) => {
+  const style = useStyles();
+
   return (
-    <SafeAreaView style={useStyles().container} edges={['top']}>
-      <View style={useStyles().infoContainer}>
-        <Text type={TextType.text}>Olá, </Text>
-        <Text type={TextType.textBold}>{name}</Text>
+    <SafeAreaView style={style.container} edges={['top']}>
+      <View style={style.infoContainer}>
+        <Text type={TextType.text} style={style.textColor}>
+          Olá,{' '}
+        </Text>
+        <Text type={TextType.textBold} style={style.textColor}>
+          {name}
+        </Text>
       </View>
       <TouchableOpacity
         onPress={onPressProfileImage}
