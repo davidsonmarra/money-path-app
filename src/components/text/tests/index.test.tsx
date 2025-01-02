@@ -48,4 +48,10 @@ describe('Text', () => {
     const text = screen.getByRole('text');
     expect(text.props.style[0]).toStrictEqual(getStyles().buttonSecondary);
   });
+
+  it('renders header style correctly', () => {
+    renderComponent(TextType.header);
+    const text = screen.getByRole('text');
+    expect(text.props.style[0]).toStrictEqual(getStyles().header);
+  });
 });

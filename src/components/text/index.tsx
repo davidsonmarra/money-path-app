@@ -8,6 +8,7 @@ export enum TextType {
   textBold = 'textBold',
   buttonPrimary = 'buttonPrimary',
   buttonSecondary = 'buttonSecondary',
+  header = 'header',
 }
 
 interface Props extends TextProps {
@@ -21,6 +22,7 @@ const Text = ({children, type, style, ...rest}: Props) => {
     [TextType.textBold]: useStyles().textBold,
     [TextType.buttonPrimary]: useStyles().buttonPrimary,
     [TextType.buttonSecondary]: useStyles().buttonSecondary,
+    [TextType.header]: useStyles().header,
   };
 
   return (

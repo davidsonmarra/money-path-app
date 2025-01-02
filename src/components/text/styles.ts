@@ -30,6 +30,11 @@ const useStyles = () => {
       fontWeight: 'bold',
       color: colors.secondary,
     },
+    header: {
+      fontSize: 20,
+      fontWeight: 'bold',
+      color: colors.textOnSecondary,
+    },
   });
 };
 

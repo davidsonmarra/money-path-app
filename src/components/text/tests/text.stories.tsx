@@ -45,3 +45,9 @@ export const ButtonSecondary: StoryObj<typeof Text> = {
     type: TextType.buttonSecondary,
   },
 };
+
+export const Header: StoryObj<typeof Text> = {
+  args: {
+    type: TextType.header,
+  },
+};
