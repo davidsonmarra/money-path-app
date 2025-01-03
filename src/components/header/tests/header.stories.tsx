@@ -1,5 +1,5 @@
 import React from 'react';
-import type {Meta} from '@storybook/react';
+import type {Meta, StoryObj} from '@storybook/react';
 import {StorybookView, Header} from 'src/components';
 
 const HeaderMeta: Meta<typeof Header> = {
@@ -21,3 +21,5 @@ const HeaderMeta: Meta<typeof Header> = {
 };
 
 export default HeaderMeta;
+
+export const Default: StoryObj<typeof Header> = {};

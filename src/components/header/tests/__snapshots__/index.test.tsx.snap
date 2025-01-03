@@ -73,6 +73,7 @@ exports[`Header renders correctly 1`] = `
           },
         ]
       }
+      testID="icon-back"
       vbHeight={960}
       vbWidth={960}
       width={24}

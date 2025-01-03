@@ -2,7 +2,7 @@ import React from 'react';
 import {TouchableOpacity, View} from 'react-native';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import Text, {TextType} from 'src/components/text';
-import BackIcon from 'src/assets/icons/back';
+import {BackIcon} from 'src/assets/icons';
 import useStyles from 'src/components/header/styles';
 
 interface renderIconProps {
