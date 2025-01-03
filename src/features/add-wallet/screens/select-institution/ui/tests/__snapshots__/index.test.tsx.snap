@@ -135,6 +135,7 @@ exports[`SelectInstitutionContainer should render correctly 1`] = `
     style={
       {
         "backgroundColor": "#232E38",
+        "flex": 1,
         "paddingHorizontal": 24,
         "paddingVertical": 16,
       }
