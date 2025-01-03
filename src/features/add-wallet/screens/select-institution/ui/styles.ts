@@ -6,6 +6,7 @@ const useStyles = () => {
 
   return StyleSheet.create({
     container: {
+      flex: 1,
       paddingHorizontal: 24,
       paddingVertical: 16,
       backgroundColor: colors.background,
