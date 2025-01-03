@@ -7,7 +7,12 @@ interface Props {
 }
 
 const BancoDoBrasilIcon = ({size = 24}: Props) => (
-  <Svg id="svg10" width={size} height={size} viewBox="0 0 192.756 192.756">
+  <Svg
+    id="svg10"
+    width={size}
+    height={size}
+    viewBox="0 0 192.756 192.756"
+    testID="icon-bancoDoBrasil">
     <G id="g8" fill="#33348e" fillRule="evenodd" clipRule="evenodd">
       <Path
         id="path4"

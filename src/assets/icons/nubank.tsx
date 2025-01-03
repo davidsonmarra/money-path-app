@@ -6,7 +6,7 @@ interface Props {
 }
 
 const NubankIcon = ({size = 48}: Props) => (
-  <Svg width={size} height={size} viewBox="0 0 2500 2500">
+  <Svg width={size} height={size} viewBox="0 0 2500 2500" testID="icon-nubank">
     <Path
       fill="#820ad1"
       fillOpacity="1"
