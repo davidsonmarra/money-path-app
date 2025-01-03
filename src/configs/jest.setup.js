@@ -39,3 +39,8 @@ jest.mock('@react-native-firebase/auth', () => ({
 jest.mock('@react-native-google-signin/google-signin', () => ({
   GoogleSignin: mockGoogleSignIn,
 }));
+
+jest.mock('react-native-safe-area-context', () => ({
+  ...jest.requireActual('react-native-safe-area-context'),
+  useSafeAreaInsets: jest.fn(() => ({top: 0, bottom: 0, left: 0, right: 0})),
+}));

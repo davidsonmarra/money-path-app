@@ -60,6 +60,7 @@ exports[`LoginContainer should render correctly 1`] = `
             },
           ]
         }
+        testID="icon-moneyPath"
         vbHeight={960}
         vbWidth={960}
         width={72}
@@ -171,6 +172,7 @@ exports[`LoginContainer should render correctly 1`] = `
                 },
               ]
             }
+            testID="icon-apple"
             vbHeight={22.773}
             vbWidth={22.773}
             width={28}
@@ -292,6 +294,7 @@ exports[`LoginContainer should render correctly 1`] = `
                 },
               ]
             }
+            testID="icon-google"
             vbHeight={48}
             vbWidth={48}
             width={28}

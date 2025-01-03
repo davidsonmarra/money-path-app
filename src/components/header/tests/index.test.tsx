@@ -2,10 +2,6 @@ import React from 'react';
 import {render, screen} from '@testing-library/react-native';
 import Header, {Props as HeaderProps} from 'src/components/header';
 
-jest.mock('react-native-safe-area-context', () => ({
-  useSafeAreaInsets: () => ({top: 0}),
-}));
-
 const mockText = 'Snapshot test!';
 const renderComponent = ({text = mockText, ...rest}: HeaderProps) =>
   render(<Header text={text} {...rest} />);
