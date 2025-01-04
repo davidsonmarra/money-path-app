@@ -117,12 +117,12 @@ exports[`SelectInstitutionContainer should render correctly 1`] = `
       style={
         [
           {
-            "color": undefined,
+            "color": "#FFF",
             "fontSize": 20,
             "fontWeight": "bold",
           },
           {
-            "color": undefined,
+            "color": "#FFF",
           },
         ]
       }
@@ -376,8 +376,9 @@ exports[`SelectInstitutionContainer should render correctly 1`] = `
           <View
             style={
               {
-                "backgroundColor": "#8c8c8c",
-                "height": 1,
+                "backgroundColor": "#FFFFFF33",
+                "height": 2.5,
+                "width": "100%",
               }
             }
           />
@@ -697,8 +698,9 @@ exports[`SelectInstitutionContainer should render correctly 1`] = `
           <View
             style={
               {
-                "backgroundColor": "#8c8c8c",
-                "height": 1,
+                "backgroundColor": "#FFFFFF33",
+                "height": 2.5,
+                "width": "100%",
               }
             }
           />
@@ -830,8 +832,9 @@ exports[`SelectInstitutionContainer should render correctly 1`] = `
           <View
             style={
               {
-                "backgroundColor": "#8c8c8c",
-                "height": 1,
+                "backgroundColor": "#FFFFFF33",
+                "height": 2.5,
+                "width": "100%",
               }
             }
           />
@@ -1053,8 +1056,9 @@ exports[`SelectInstitutionContainer should render correctly 1`] = `
           <View
             style={
               {
-                "backgroundColor": "#8c8c8c",
-                "height": 1,
+                "backgroundColor": "#FFFFFF33",
+                "height": 2.5,
+                "width": "100%",
               }
             }
           />
@@ -1186,8 +1190,9 @@ exports[`SelectInstitutionContainer should render correctly 1`] = `
           <View
             style={
               {
-                "backgroundColor": "#8c8c8c",
-                "height": 1,
+                "backgroundColor": "#FFFFFF33",
+                "height": 2.5,
+                "width": "100%",
               }
             }
           />

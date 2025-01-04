@@ -1,32 +1,33 @@
 import React from 'react';
-import {
-  DefaultSectionT,
-  SectionList,
-  SectionListRenderItem,
-  View,
-} from 'react-native';
+import {SectionList, SectionListRenderItem, View} from 'react-native';
 import {IconType} from 'src/assets/icons/types';
-import {Header, ListItem, Text, TextType} from 'src/components';
+import {Divider, Header, ListItem, Text, TextType} from 'src/components';
 import useStyles from 'src/features/add-wallet/screens/select-institution/ui/styles';
+import {
+  InstitutionProps,
+  SelectInstitutionSection,
+} from 'src/features/add-wallet/types';
 
 interface Props {
   onBack: () => void;
+  selectInstitution: (institution: InstitutionProps) => void;
 }
-
-interface InstitutionProps {
-  name: string;
-  icon: IconType;
-  backgroundColor?: string;
-}
-
-type Section = {
-  title: string;
-  data: InstitutionProps[];
-};
 
 const personalInstitutions: InstitutionProps[] = [
-  {name: 'Carteira', icon: IconType.wallet},
-  {name: 'Banco', icon: IconType.bank},
+  {
+    name: 'Carteira',
+    icon: IconType.wallet,
+    backgroundColor: '#2A5C99',
+    color: '#EAC43D',
+    type: 'personal',
+  },
+  {
+    name: 'Banco',
+    icon: IconType.bank,
+    backgroundColor: '#2A5C99',
+    color: '#EAC43D',
+    type: 'personal',
+  },
 ];
 
 const banksInstitutions: InstitutionProps[] = [
@@ -34,14 +35,35 @@ const banksInstitutions: InstitutionProps[] = [
     name: 'Banco do Brasil',
     icon: IconType.bancoDoBrasil,
     backgroundColor: '#FFEF38',
+    type: 'bank',
   },
-  {name: 'Itaú', icon: IconType.itau, backgroundColor: '#FF6A00'},
-  {name: 'Nubank', icon: IconType.nubank, backgroundColor: '#820AD1'},
-  {name: 'Santander', icon: IconType.santander, backgroundColor: '#EA1D25'},
-  {name: 'Inter', icon: IconType.inter, backgroundColor: '#EA7100'},
+  {
+    name: 'Itaú',
+    icon: IconType.itau,
+    backgroundColor: '#FF6A00',
+    type: 'bank',
+  },
+  {
+    name: 'Nubank',
+    icon: IconType.nubank,
+    backgroundColor: '#820AD1',
+    type: 'bank',
+  },
+  {
+    name: 'Santander',
+    icon: IconType.santander,
+    backgroundColor: '#EA1D25',
+    type: 'bank',
+  },
+  {
+    name: 'Inter',
+    icon: IconType.inter,
+    backgroundColor: '#EA7100',
+    type: 'bank',
+  },
 ];
 
-const data: Section[] = [
+const data: SelectInstitutionSection[] = [
   {
     title: 'Personalizado',
     data: personalInstitutions,
@@ -52,18 +74,22 @@ const data: Section[] = [
   },
 ];
 
-const renderItem:
-  | SectionListRenderItem<InstitutionProps, DefaultSectionT>
-  | undefined = ({index, item: {name, icon, backgroundColor}}) => (
-  <ListItem
-    text={name}
-    icon={icon}
-    backgroundColor={backgroundColor}
-    testID={`btn-list-item-${index}`}
-  />
-);
+const renderItem =
+  (
+    selectInstitution: (institution: InstitutionProps) => void,
+  ): SectionListRenderItem<InstitutionProps> =>
+  ({index, item}) =>
+    (
+      <ListItem
+        text={item.name}
+        icon={item.icon}
+        backgroundColor={item.backgroundColor}
+        testID={`btn-list-item-${index}`}
+        onPress={() => selectInstitution(item)}
+      />
+    );
 
-const SelectInstitutionContainer = ({onBack}: Props) => {
+const SelectInstitutionContainer = ({onBack, selectInstitution}: Props) => {
   const styles = useStyles();
   return (
     <>
@@ -72,18 +98,11 @@ const SelectInstitutionContainer = ({onBack}: Props) => {
         <SectionList<InstitutionProps>
           sections={data}
           keyExtractor={item => item.name}
-          renderItem={renderItem}
+          renderItem={renderItem(selectInstitution)}
           renderSectionHeader={({section: {title}}) => (
             <Text type={TextType.textBold}>{title}</Text>
           )}
-          ItemSeparatorComponent={() => (
-            <View
-              style={{
-                height: 1,
-                backgroundColor: '#8c8c8c',
-              }}
-            />
-          )}
+          ItemSeparatorComponent={() => <Divider />}
           SectionSeparatorComponent={() => <View style={{marginBottom: 16}} />}
           stickySectionHeadersEnabled={false}
           contentContainerStyle={styles.sectionListContent}
