@@ -10,4 +10,5 @@ export default {
   disabled: '#4F4F4F',
   buttonText: '#FFF',
   divider: '#FFFFFF33',
+  inputDisabled: '#FFFFFF77',
 };

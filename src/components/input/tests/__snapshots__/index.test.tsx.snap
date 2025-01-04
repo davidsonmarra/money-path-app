@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input renders correctly 1`] = `
+<TextInput
+  editable={false}
+  onBlur={[Function]}
+  onFocus={[Function]}
+  selectTextOnFocus={false}
+  style={
+    {
+      "backgroundColor": undefined,
+      "borderColor": undefined,
+      "borderRadius": 8,
+      "borderWidth": 1,
+      "color": "#D9D9D9",
+      "paddingHorizontal": 16,
+      "paddingVertical": 12,
+      "width": "100%",
+    }
+  }
+/>
+`;
