@@ -9,7 +9,7 @@ exports[`Input renders correctly 1`] = `
   style={
     {
       "backgroundColor": "#232E38",
-      "borderColor": undefined,
+      "borderColor": "#FFFFFF33",
       "borderRadius": 8,
       "borderWidth": 1,
       "color": "#D9D9D9",

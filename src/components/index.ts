@@ -1,4 +1,9 @@
 export {default as Button, ButtonType} from 'src/components/button';
+export {
+  default as Divider,
+  DividerSize,
+  DividerType,
+} from 'src/components/divider';
 export {default as Feedback, FeedbackType} from 'src/components/feedback';
 export {default as Header} from 'src/components/header';
 export {default as Input} from 'src/components/input';

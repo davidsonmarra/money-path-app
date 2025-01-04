@@ -107,12 +107,12 @@ exports[`Header renders correctly 1`] = `
     style={
       [
         {
-          "color": undefined,
+          "color": "#FFF",
           "fontSize": 20,
           "fontWeight": "bold",
         },
         {
-          "color": undefined,
+          "color": "#FFF",
         },
       ]
     }

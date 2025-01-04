@@ -31,7 +31,7 @@ exports[`Feedback renders correctly 1`] = `
             "width": 180,
           },
           {
-            "backgroundColor": undefined,
+            "backgroundColor": "#A6CD4E30",
           },
         ]
       }
