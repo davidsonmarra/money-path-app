@@ -6,7 +6,7 @@ export interface Props extends TextInputProps {
   disabled?: boolean;
 }
 
-const Input = ({disabled = true, ...rest}: Props) => {
+const Input = ({disabled = false, ...rest}: Props) => {
   const [isFocused, setIsFocused] = useState(false);
   const styles = useStyles({disabled, isFocused});
 

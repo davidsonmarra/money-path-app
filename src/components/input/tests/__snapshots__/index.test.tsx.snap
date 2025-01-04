@@ -2,13 +2,13 @@
 
 exports[`Input renders correctly 1`] = `
 <TextInput
-  editable={false}
+  editable={true}
   onBlur={[Function]}
   onFocus={[Function]}
-  selectTextOnFocus={false}
+  selectTextOnFocus={true}
   style={
     {
-      "backgroundColor": undefined,
+      "backgroundColor": "#232E38",
       "borderColor": undefined,
       "borderRadius": 8,
       "borderWidth": 1,
