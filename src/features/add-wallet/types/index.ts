@@ -5,6 +5,7 @@ export interface InstitutionProps {
   icon: IconType;
   color?: string;
   backgroundColor?: string;
+  type: 'personal' | 'bank';
 }
 
 export type SelectInstitutionSection = {

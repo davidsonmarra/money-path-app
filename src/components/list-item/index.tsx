@@ -4,7 +4,7 @@ import {IconType} from 'src/assets/icons/types';
 import renderIcon from 'src/assets/icons/utils';
 import {Text, TextType} from 'src/components';
 import useStyles from 'src/components/list-item/styles';
-import {useTheme} from 'src/hooks/theme';
+import {useTheme} from 'src/hooks/useTheme';
 
 export interface Props extends TouchableOpacityProps {
   text: string;

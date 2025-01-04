@@ -153,12 +153,18 @@ exports[`SelectInstitutionContainer should render correctly 1`] = `
           {
             "data": [
               {
+                "backgroundColor": "#2A5C99",
+                "color": "#EAC43D",
                 "icon": "wallet",
                 "name": "Carteira",
+                "type": "personal",
               },
               {
+                "backgroundColor": "#2A5C99",
+                "color": "#EAC43D",
                 "icon": "bank",
                 "name": "Banco",
+                "type": "personal",
               },
             ],
             "title": "Personalizado",
@@ -169,26 +175,31 @@ exports[`SelectInstitutionContainer should render correctly 1`] = `
                 "backgroundColor": "#FFEF38",
                 "icon": "bancoDoBrasil",
                 "name": "Banco do Brasil",
+                "type": "bank",
               },
               {
                 "backgroundColor": "#FF6A00",
                 "icon": "itau",
                 "name": "Itaú",
+                "type": "bank",
               },
               {
                 "backgroundColor": "#820AD1",
                 "icon": "nubank",
                 "name": "Nubank",
+                "type": "bank",
               },
               {
                 "backgroundColor": "#EA1D25",
                 "icon": "santander",
                 "name": "Santander",
+                "type": "bank",
               },
               {
                 "backgroundColor": "#EA7100",
                 "icon": "inter",
                 "name": "Inter",
+                "type": "bank",
               },
             ],
             "title": "Bancos",
@@ -263,7 +274,7 @@ exports[`SelectInstitutionContainer should render correctly 1`] = `
             }
             accessible={true}
             collapsable={false}
-            focusable={false}
+            focusable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -396,7 +407,7 @@ exports[`SelectInstitutionContainer should render correctly 1`] = `
             }
             accessible={true}
             collapsable={false}
-            focusable={false}
+            focusable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -560,7 +571,7 @@ exports[`SelectInstitutionContainer should render correctly 1`] = `
             }
             accessible={true}
             collapsable={false}
-            focusable={false}
+            focusable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -717,7 +728,7 @@ exports[`SelectInstitutionContainer should render correctly 1`] = `
             }
             accessible={true}
             collapsable={false}
-            focusable={false}
+            focusable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -850,7 +861,7 @@ exports[`SelectInstitutionContainer should render correctly 1`] = `
             }
             accessible={true}
             collapsable={false}
-            focusable={false}
+            focusable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -1073,7 +1084,7 @@ exports[`SelectInstitutionContainer should render correctly 1`] = `
             }
             accessible={true}
             collapsable={false}
-            focusable={false}
+            focusable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -1206,7 +1217,7 @@ exports[`SelectInstitutionContainer should render correctly 1`] = `
             }
             accessible={true}
             collapsable={false}
-            focusable={false}
+            focusable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}

@@ -7,7 +7,7 @@ import {
 } from 'react-native';
 import Text, {TextType} from 'src/components/text';
 import useStyles from 'src/components/button/styles';
-import {useTheme} from 'src/hooks/theme';
+import {useTheme} from 'src/hooks/useTheme';
 
 export enum ButtonType {
   primary = 'primary',

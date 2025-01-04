@@ -9,4 +9,5 @@ export default {
   text: '#000',
   disabled: '#4F4F4F',
   buttonText: '#FFF',
+  divider: '#00000055',
 };

@@ -17,7 +17,7 @@ const mockTheme = {
   },
 };
 
-jest.mock('src/hooks/theme', () => ({
+jest.mock('src/hooks/useTheme', () => ({
   useTheme: () => ({
     theme: mockTheme,
     dark: true,
