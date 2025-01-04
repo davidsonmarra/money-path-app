@@ -3,6 +3,8 @@ export enum IconType {
   back = 'back',
   bancoDoBrasil = 'bancoDoBrasil',
   bank = 'bank',
+  check = 'check',
+  error = 'error',
   google = 'google',
   inter = 'inter',
   itau = 'itau',
@@ -10,4 +12,5 @@ export enum IconType {
   nubank = 'nubank',
   santander = 'santander',
   wallet = 'wallet',
+  warning = 'warning',
 }

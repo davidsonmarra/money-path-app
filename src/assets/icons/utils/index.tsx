@@ -4,6 +4,8 @@ import {
   BackIcon,
   BancoDoBrasilIcon,
   BankIcon,
+  CheckIcon,
+  ErrorIcon,
   GoogleIcon,
   InterIcon,
   ItauIcon,
@@ -11,6 +13,7 @@ import {
   NubankIcon,
   SantanderIcon,
   WalletIcon,
+  WarningIcon,
 } from 'src/assets/icons';
 
 const renderIcon = (icon: IconType) =>
@@ -19,6 +22,8 @@ const renderIcon = (icon: IconType) =>
     [IconType.back]: BackIcon,
     [IconType.bancoDoBrasil]: BancoDoBrasilIcon,
     [IconType.bank]: BankIcon,
+    [IconType.check]: CheckIcon,
+    [IconType.error]: ErrorIcon,
     [IconType.google]: GoogleIcon,
     [IconType.moneyPath]: MoneyPathIcon,
     [IconType.inter]: InterIcon,
@@ -26,6 +31,7 @@ const renderIcon = (icon: IconType) =>
     [IconType.nubank]: NubankIcon,
     [IconType.santander]: SantanderIcon,
     [IconType.wallet]: WalletIcon,
+    [IconType.warning]: WarningIcon,
   }[icon]);
 
 export default renderIcon;
