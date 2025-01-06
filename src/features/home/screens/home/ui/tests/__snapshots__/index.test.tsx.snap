@@ -48,7 +48,7 @@ exports[`HomeContainer should render correctly 1`] = `
               "fontWeight": "normal",
             },
             {
-              "color": undefined,
+              "color": "#FFF",
             },
           ]
         }
@@ -65,7 +65,7 @@ exports[`HomeContainer should render correctly 1`] = `
               "fontWeight": "bold",
             },
             {
-              "color": undefined,
+              "color": "#FFF",
             },
           ]
         }
