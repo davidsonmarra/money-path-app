@@ -10,6 +10,7 @@ const SelectInstitutionContainerMeta: Meta<typeof SelectInstitutionContainer> =
     decorators: [Story => <Story />],
     args: {
       onBack: action('onPress onBack'),
+      selectInstitution: action('onPress selectInstitution'),
     },
   };
 
