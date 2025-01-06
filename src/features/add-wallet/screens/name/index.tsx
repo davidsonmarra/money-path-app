@@ -1,5 +1,5 @@
-import React, {useEffect, useState} from 'react';
-import {useNavigation} from '@react-navigation/native';
+import React, {useCallback, useEffect, useState} from 'react';
+import {useFocusEffect, useNavigation} from '@react-navigation/native';
 import {StackNavigationProp} from '@react-navigation/stack';
 import {PrivateStackParamList} from 'src/features/navigation';
 import NameContainer from 'src/features/add-wallet/screens/name/ui';
@@ -22,15 +22,11 @@ const NameScreen = () => {
       name,
     };
     setInstitution(newInstitution);
-  };
 
-  useEffect(() => {
-    if (institution?.name === name) {
-      navigation.navigate('AddWalletStack', {
-        screen: 'Feedback',
-      });
-    }
-  }, [institution?.name]);
+    navigation.navigate('AddWalletStack', {
+      screen: 'Feedback',
+    });
+  };
 
   return (
     <NameContainer

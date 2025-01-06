@@ -1,0 +1,334 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FeedbackContainer should render correctly 1`] = `
+<RNCSafeAreaView
+  edges={
+    {
+      "bottom": "additive",
+      "left": "additive",
+      "right": "additive",
+      "top": "additive",
+    }
+  }
+>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "backgroundColor": "#2A5C99",
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "paddingBottom": 12,
+        "paddingHorizontal": 16,
+        "paddingTop": 12,
+        "width": "100%",
+      }
+    }
+  >
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "opacity": 1,
+        }
+      }
+      testID="btn-left-icon"
+    >
+      <RNSVGSvgView
+        align="xMidYMid"
+        bbHeight={24}
+        bbWidth={24}
+        fill="#FFF"
+        focusable={false}
+        height={24}
+        meetOrSlice={0}
+        minX={0}
+        minY={-960}
+        style={
+          [
+            {
+              "backgroundColor": "transparent",
+              "borderWidth": 0,
+            },
+            {
+              "flex": 0,
+              "height": 24,
+              "width": 24,
+            },
+          ]
+        }
+        testID="icon-close"
+        vbHeight={960}
+        vbWidth={960}
+        width={24}
+      >
+        <RNSVGGroup
+          fill={
+            {
+              "payload": 4294967295,
+              "type": 0,
+            }
+          }
+          propList={
+            [
+              "fill",
+            ]
+          }
+        >
+          <RNSVGPath
+            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224z"
+            fill={
+              {
+                "payload": 4278190080,
+                "type": 0,
+              }
+            }
+          />
+        </RNSVGGroup>
+      </RNSVGSvgView>
+    </View>
+    <Text
+      style={
+        [
+          {
+            "color": "#FFF",
+            "fontSize": 20,
+            "fontWeight": "bold",
+          },
+          {
+            "color": "#FFF",
+          },
+        ]
+      }
+    />
+    <View />
+  </View>
+  <RNCSafeAreaView
+    edges={
+      {
+        "bottom": "additive",
+        "left": "additive",
+        "right": "additive",
+        "top": "additive",
+      }
+    }
+    style={
+      {
+        "backgroundColor": "#232E38",
+        "flex": 1,
+        "paddingHorizontal": 24,
+        "paddingVertical": 16,
+      }
+    }
+  >
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "flex": 1,
+          "justifyContent": "space-between",
+        }
+      }
+    >
+      <View />
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "gap": 16,
+          }
+        }
+      >
+        <View
+          style={
+            [
+              {
+                "alignItems": "center",
+                "borderRadius": 90,
+                "height": 180,
+                "justifyContent": "center",
+                "marginBottom": 16,
+                "width": 180,
+              },
+              {
+                "backgroundColor": "#A6CD4E30",
+              },
+            ]
+          }
+        >
+          <RNSVGSvgView
+            align="xMidYMid"
+            bbHeight={100}
+            bbWidth={100}
+            fill="#A6CD4E"
+            focusable={false}
+            height={100}
+            meetOrSlice={0}
+            minX={0}
+            minY={-960}
+            style={
+              [
+                {
+                  "backgroundColor": "transparent",
+                  "borderWidth": 0,
+                },
+                {
+                  "flex": 0,
+                  "height": 100,
+                  "width": 100,
+                },
+              ]
+            }
+            testID="icon-check"
+            vbHeight={960}
+            vbWidth={960}
+            width={100}
+          >
+            <RNSVGGroup
+              fill={
+                {
+                  "payload": 4289121614,
+                  "type": 0,
+                }
+              }
+              propList={
+                [
+                  "fill",
+                ]
+              }
+            >
+              <RNSVGPath
+                d="m424-296 282-282-56-56-226 226-114-114-56 56zm56 216q-83 0-156-31.5T197-197t-85.5-127T80-480t31.5-156T197-763t127-85.5T480-880t156 31.5T763-763t85.5 127T880-480t-31.5 156T763-197t-127 85.5T480-80m0-80q134 0 227-93t93-227-93-227-227-93-227 93-93 227 93 227 227 93m0-320"
+                fill={
+                  {
+                    "payload": 4278190080,
+                    "type": 0,
+                  }
+                }
+              />
+            </RNSVGGroup>
+          </RNSVGSvgView>
+        </View>
+        <Text
+          style={
+            [
+              {
+                "color": "#FFF",
+                "fontSize": 24,
+                "fontWeight": "bold",
+              },
+              {
+                "textAlign": "center",
+              },
+            ]
+          }
+        >
+          Carteira criada!
+        </Text>
+        <Text
+          style={
+            [
+              {
+                "color": "#D9D9D9",
+                "fontSize": 16,
+                "fontWeight": "normal",
+              },
+              {
+                "textAlign": "center",
+              },
+            ]
+          }
+        >
+          Sua carteira foi criada com sucesso. Agora, você pode adicionar transações.
+        </Text>
+      </View>
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": false,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "backgroundColor": "#EAC43D",
+            "borderRadius": 12,
+            "flexDirection": "row",
+            "height": 48,
+            "justifyContent": "space-between",
+            "opacity": 1,
+            "paddingHorizontal": 24,
+            "paddingVertical": 12,
+            "width": "100%",
+          }
+        }
+      >
+        <View />
+        <Text
+          style={
+            [
+              {
+                "color": "#FFF",
+                "fontSize": 16,
+                "fontWeight": "bold",
+              },
+              undefined,
+            ]
+          }
+        >
+          Voltar para a tela inicial
+        </Text>
+        <View />
+      </View>
+    </View>
+  </RNCSafeAreaView>
+</RNCSafeAreaView>
+`;

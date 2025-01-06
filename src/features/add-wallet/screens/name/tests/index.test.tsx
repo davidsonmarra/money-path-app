@@ -18,7 +18,6 @@ let mockInstitution = {
   type: 'personal',
 };
 const mockSetInstitution = jest.fn().mockImplementation(institution => {
-  console.log('mockSetInstitution', institution);
   mockInstitution = institution;
 });
 jest.mock('src/features/add-wallet/hooks/use-add-wallet-form', () => () => ({
@@ -50,10 +49,14 @@ describe('NameScreen', () => {
     expect(mockInstitution.name).toBe('Wallet Name');
   });
 
-  it('should navigate correctly when an confirm', () => {
+  it('should navigate correctly when confirm', async () => {
     render(<NameScreen />);
-    const institution = screen.getByText('Criar carteira');
-    fireEvent.press(institution);
+    const input = screen.getByTestId('input-name');
+    await waitFor(() => {
+      fireEvent.changeText(input, 'Wallet Name');
+    });
+    const button = screen.getByText('Criar carteira');
+    fireEvent.press(button);
     expect(mockNavigation.navigate).toHaveBeenCalledWith('AddWalletStack', {
       screen: 'Feedback',
     });
