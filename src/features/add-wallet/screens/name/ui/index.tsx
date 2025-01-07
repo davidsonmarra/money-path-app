@@ -2,7 +2,6 @@ import React from 'react';
 import {
   KeyboardAvoidingView,
   Platform,
-  View,
   TouchableWithoutFeedback,
   Keyboard,
 } from 'react-native';

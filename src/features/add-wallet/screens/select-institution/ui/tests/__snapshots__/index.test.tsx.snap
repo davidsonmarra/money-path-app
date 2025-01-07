@@ -250,7 +250,7 @@ exports[`SelectInstitutionContainer should render correctly 1`] = `
           <View
             style={
               {
-                "marginBottom": 16,
+                "marginBottom": 24,
               }
             }
           />
@@ -674,7 +674,7 @@ exports[`SelectInstitutionContainer should render correctly 1`] = `
           <View
             style={
               {
-                "marginBottom": 16,
+                "marginBottom": 24,
               }
             }
           />
@@ -712,7 +712,7 @@ exports[`SelectInstitutionContainer should render correctly 1`] = `
           <View
             style={
               {
-                "marginBottom": 16,
+                "marginBottom": 24,
               }
             }
           />
@@ -1910,7 +1910,7 @@ exports[`SelectInstitutionContainer should render correctly 1`] = `
           <View
             style={
               {
-                "marginBottom": 16,
+                "marginBottom": 24,
               }
             }
           />

@@ -16,5 +16,6 @@ export default {
   buttonText: '#FFF',
   divider: '#00000055',
   inputDisabled: '#00000033',
+  placeholder: '#00000055',
   navigationIndicator: '#00000055',
 };

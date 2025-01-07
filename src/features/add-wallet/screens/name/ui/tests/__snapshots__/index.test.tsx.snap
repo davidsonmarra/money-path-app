@@ -181,28 +181,39 @@ exports[`NameContainer should render correctly 1`] = `
         }
       }
     >
-      <TextInput
-        editable={true}
-        onBlur={[Function]}
-        onChangeText={[MockFunction]}
-        onFocus={[Function]}
-        placeholder="Nome da carteira"
-        selectTextOnFocus={true}
+      <View
         style={
           {
+            "alignItems": "center",
             "backgroundColor": "#232E38",
             "borderColor": "#FFFFFF33",
             "borderRadius": 8,
             "borderWidth": 1,
-            "color": "#D9D9D9",
+            "flexDirection": "row",
             "paddingHorizontal": 16,
-            "paddingVertical": 12,
             "width": "100%",
           }
         }
-        testID="input-name"
-        value=""
-      />
+      >
+        <TextInput
+          editable={true}
+          onBlur={[Function]}
+          onChangeText={[MockFunction]}
+          onFocus={[Function]}
+          placeholder="Nome da carteira"
+          placeholderTextColor="#FFFFFF55"
+          selectTextOnFocus={true}
+          style={
+            {
+              "color": "#D9D9D9",
+              "paddingVertical": 12,
+              "width": "100%",
+            }
+          }
+          testID="input-name"
+          value=""
+        />
+      </View>
       <View
         accessibilityState={
           {

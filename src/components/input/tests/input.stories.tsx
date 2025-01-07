@@ -1,6 +1,6 @@
 import React from 'react';
 import type {Meta, StoryObj} from '@storybook/react';
-import {Input, StorybookView} from 'src/components';
+import {Input, StorybookView, Text, TextType} from 'src/components';
 
 const InputMeta: Meta<typeof Input> = {
   title: 'Components/Input',
@@ -28,5 +28,15 @@ export const Default: StoryObj<typeof Input> = {};
 export const Disabled: StoryObj<typeof Input> = {
   args: {
     disabled: true,
+  },
+};
+
+export const WithSuffix: StoryObj<typeof Input> = {
+  args: {
+    suffix: (
+      <Text type={TextType.textBold} style={{marginHorizontal: 4}}>
+        R$
+      </Text>
+    ),
   },
 };
