@@ -11,6 +11,7 @@ export enum IconType {
   inter = 'inter',
   itau = 'itau',
   moneyPath = 'moneyPath',
+  money = 'money',
   nubank = 'nubank',
   santander = 'santander',
   wallet = 'wallet',

@@ -10,6 +10,7 @@ export {default as GoogleIcon} from 'src/assets/icons/google';
 export {default as InterIcon} from 'src/assets/icons/inter';
 export {default as ItauIcon} from 'src/assets/icons/itau';
 export {default as MoneyPathIcon} from 'src/assets/icons/money-path';
+export {default as MoneyIcon} from 'src/assets/icons/money';
 export {default as NubankIcon} from 'src/assets/icons/nubank';
 export {default as SantanderIcon} from 'src/assets/icons/santander';
 export {default as WalletIcon} from 'src/assets/icons/wallet';
