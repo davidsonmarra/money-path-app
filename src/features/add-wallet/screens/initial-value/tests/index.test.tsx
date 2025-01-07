@@ -1,6 +1,6 @@
 import React from 'react';
 import {screen, render, fireEvent, waitFor} from 'src/configs/test-utils';
-import NameScreen from 'src/features/add-wallet/screens/name';
+import InitialValueScreen from 'src/features/add-wallet/screens/initial-value';
 
 const mockNavigation = {
   goBack: jest.fn(),
@@ -14,7 +14,8 @@ let mockInstitution = {
   backgroundColor: '#2A5C99',
   color: '#EAC43D',
   icon: 'wallet',
-  name: '',
+  name: 'Name',
+  amount: null,
   type: 'personal',
 };
 const mockSetInstitution = jest.fn().mockImplementation(institution => {
@@ -25,40 +26,40 @@ jest.mock('src/features/add-wallet/hooks/use-add-wallet-form', () => () => ({
   setInstitution: mockSetInstitution,
 }));
 
-describe('NameScreen', () => {
+describe('InitialValueScreen', () => {
   beforeEach(() => {
-    mockInstitution.name = '';
+    mockInstitution.amount = null;
     jest.clearAllMocks();
   });
 
   it('should go back when back button is pressed', () => {
-    render(<NameScreen />);
+    render(<InitialValueScreen />);
     const backButton = screen.getByTestId('btn-left-icon');
     backButton.props.onClick();
     expect(mockNavigation.goBack).toHaveBeenCalledTimes(1);
   });
 
-  it('should set name correctly', async () => {
-    render(<NameScreen />);
+  it('should set value correctly', async () => {
+    render(<InitialValueScreen />);
     const input = screen.getByTestId('input-name');
     await waitFor(() => {
-      fireEvent.changeText(input, 'Wallet Name');
+      fireEvent.changeText(input, '100');
     });
     const button = screen.getByTestId('btn-confirm');
     fireEvent.press(button);
-    expect(mockInstitution.name).toBe('Wallet Name');
+    expect(mockInstitution.amount).toBe(100);
   });
 
   it('should navigate correctly when confirm', async () => {
-    render(<NameScreen />);
+    render(<InitialValueScreen />);
     const input = screen.getByTestId('input-name');
     await waitFor(() => {
-      fireEvent.changeText(input, 'Wallet Name');
+      fireEvent.changeText(input, '100');
     });
-    const button = screen.getByText('Continuar');
+    const button = screen.getByText('Criar carteira');
     fireEvent.press(button);
     expect(mockNavigation.navigate).toHaveBeenCalledWith('AddWalletStack', {
-      screen: 'InitialValue',
+      screen: 'Feedback',
     });
   });
 });

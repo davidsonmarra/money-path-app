@@ -1,26 +1,26 @@
 import React from 'react';
 import {fireEvent, render} from 'src/configs/test-utils';
-import NameContainer from 'src/features/add-wallet/screens/name/ui';
+import InitialValueContainer from 'src/features/add-wallet/screens/initial-value/ui';
 
-let mockName = '';
-const mockSetName = jest.fn().mockImplementation((value: string) => {
-  mockName = value;
+let mockValue = '';
+const mockSetValue = jest.fn().mockImplementation((value: string) => {
+  mockValue = value;
 });
 const mockOnBackPress = jest.fn();
 const mockOnConfirm = jest.fn();
-const containerInstance = ({name = mockName}) =>
+const containerInstance = ({value = mockValue}) =>
   render(
-    <NameContainer
-      name={name}
+    <InitialValueContainer
+      value={value}
       onBack={mockOnBackPress}
-      setName={mockSetName}
+      setValue={mockSetValue}
       onConfirm={mockOnConfirm}
     />,
   );
 
-describe('NameContainer', () => {
+describe('InitialValueContainer', () => {
   beforeEach(() => {
-    mockName = '';
+    mockValue = '';
     jest.clearAllMocks();
   });
 
@@ -35,23 +35,17 @@ describe('NameContainer', () => {
     expect(mockOnBackPress).toHaveBeenCalledTimes(1);
   });
 
-  it('should setName correctly', () => {
+  it('should setValue correctly', () => {
     const container = containerInstance({});
     const input = container.getByTestId('input-name');
-    fireEvent.changeText(input, 'Wallet Name');
-    expect(mockName).toBe('Wallet Name');
+    fireEvent.changeText(input, '100,00');
+    expect(mockValue).toBe('100,00');
   });
 
   it('should call onConfirm', () => {
-    const container = containerInstance({name: 'Wallet Name'});
-    const button = container.getByText('Continuar');
+    const container = containerInstance({value: '100,00'});
+    const button = container.getByText('Criar carteira');
     fireEvent.press(button);
     expect(mockOnConfirm).toHaveBeenCalledTimes(1);
-  });
-
-  it('should disable button when name is empty', () => {
-    const container = containerInstance({});
-    const button = container.getByTestId('btn-confirm');
-    expect(button.props.accessibilityState.disabled).toBeTruthy();
   });
 });

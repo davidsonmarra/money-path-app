@@ -24,7 +24,7 @@ const NameScreen = () => {
     setInstitution(newInstitution);
 
     navigation.navigate('AddWalletStack', {
-      screen: 'Feedback',
+      screen: 'InitialValue',
     });
   };
 

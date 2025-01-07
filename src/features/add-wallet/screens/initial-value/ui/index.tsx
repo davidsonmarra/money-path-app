@@ -1,43 +1,51 @@
 import React from 'react';
 import {
+  Keyboard,
   KeyboardAvoidingView,
   Platform,
   TouchableWithoutFeedback,
-  Keyboard,
 } from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
+import {useTheme} from 'src/hooks/useTheme';
 import {Button, ButtonType, Header, Input} from 'src/components';
-import useStyles from 'src/features/add-wallet/screens/name/ui/styles';
+import {IconType} from 'src/assets/icons/types';
+import renderIcon from 'src/assets/icons/utils';
+import useStyles from 'src/features/add-wallet/screens/initial-value/ui/styles';
 
-interface Props {
-  name?: string;
+export interface Props {
+  value?: string;
   onBack: () => void;
-  setName: (value: string) => void;
+  setValue: (value: string) => void;
   onConfirm: () => void;
 }
 
-const NameContainer = ({name = '', onBack, setName, onConfirm}: Props) => {
+const InitialValueContainer = ({value, onBack, setValue, onConfirm}: Props) => {
+  const {colors} = useTheme().theme;
   const styles = useStyles();
 
   return (
     <>
-      <Header text="Nome" onLeftIconPress={onBack} />
+      <Header text="Valor Inicial" onLeftIconPress={onBack} />
       <KeyboardAvoidingView
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
         style={styles.flex}>
         <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
           <SafeAreaView edges={['bottom']} style={styles.container}>
             <Input
-              value={name}
-              onChangeText={setName}
-              placeholder="Nome da carteira"
+              value={value}
+              onChangeText={setValue}
+              placeholder="0,00"
+              suffix={renderIcon(IconType.money)({
+                color: colors.title,
+                size: 24,
+              })}
               testID="input-name"
+              keyboardType="numeric"
             />
             <Button
               type={ButtonType.primary}
-              text="Continuar"
+              text="Criar carteira"
               onPress={onConfirm}
-              isDisabled={!name}
               testID="btn-confirm"
             />
           </SafeAreaView>
@@ -47,4 +55,4 @@ const NameContainer = ({name = '', onBack, setName, onConfirm}: Props) => {
   );
 };
 
-export default NameContainer;
+export default InitialValueContainer;

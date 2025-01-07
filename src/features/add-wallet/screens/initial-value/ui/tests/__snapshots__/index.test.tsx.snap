@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`NameContainer should render correctly 1`] = `
+exports[`InitialValueContainer should render correctly 1`] = `
 <RNCSafeAreaView
   edges={
     {
@@ -127,7 +127,7 @@ exports[`NameContainer should render correctly 1`] = `
         ]
       }
     >
-      Nome
+      Valor Inicial
     </Text>
     <View />
   </View>
@@ -190,17 +190,78 @@ exports[`NameContainer should render correctly 1`] = `
             "borderRadius": 8,
             "borderWidth": 1,
             "flexDirection": "row",
-            "paddingHorizontal": 16,
+            "paddingHorizontal": 8,
             "width": "100%",
           }
         }
       >
+        <View
+          style={
+            {
+              "marginRight": 4,
+            }
+          }
+        >
+          <RNSVGSvgView
+            align="xMidYMid"
+            bbHeight={24}
+            bbWidth={24}
+            fill="#FFF"
+            focusable={false}
+            height={24}
+            meetOrSlice={0}
+            minX={0}
+            minY={-960}
+            style={
+              [
+                {
+                  "backgroundColor": "transparent",
+                  "borderWidth": 0,
+                },
+                {
+                  "flex": 0,
+                  "height": 24,
+                  "width": 24,
+                },
+              ]
+            }
+            testID="icon-money"
+            vbHeight={960}
+            vbWidth={960}
+            width={24}
+          >
+            <RNSVGGroup
+              fill={
+                {
+                  "payload": 4294967295,
+                  "type": 0,
+                }
+              }
+              propList={
+                [
+                  "fill",
+                ]
+              }
+            >
+              <RNSVGPath
+                d="M441-120v-86q-53-12-91.5-46T293-348l74-30q15 48 44.5 73t77.5 25q41 0 69.5-18.5T587-356q0-35-22-55.5T463-458q-86-27-118-64.5T313-614q0-65 42-101t86-41v-84h80v84q50 8 82.5 36.5T651-650l-74 32q-12-32-34-48t-60-16q-44 0-67 19.5T393-614q0 33 30 52t104 40q69 20 104.5 63.5T667-358q0 71-42 108t-104 46v84z"
+                fill={
+                  {
+                    "payload": 4278190080,
+                    "type": 0,
+                  }
+                }
+              />
+            </RNSVGGroup>
+          </RNSVGSvgView>
+        </View>
         <TextInput
           editable={true}
+          keyboardType="numeric"
           onBlur={[Function]}
           onChangeText={[MockFunction]}
           onFocus={[Function]}
-          placeholder="Nome da carteira"
+          placeholder="0,00"
           placeholderTextColor="#FFFFFF55"
           selectTextOnFocus={true}
           style={
@@ -219,7 +280,7 @@ exports[`NameContainer should render correctly 1`] = `
           {
             "busy": undefined,
             "checked": undefined,
-            "disabled": true,
+            "disabled": false,
             "expanded": undefined,
             "selected": undefined,
           }
@@ -234,7 +295,7 @@ exports[`NameContainer should render correctly 1`] = `
         }
         accessible={true}
         collapsable={false}
-        focusable={false}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -245,7 +306,7 @@ exports[`NameContainer should render correctly 1`] = `
         style={
           {
             "alignItems": "center",
-            "backgroundColor": "#4F4F4F",
+            "backgroundColor": "#EAC43D",
             "borderRadius": 12,
             "flexDirection": "row",
             "height": 48,
@@ -271,7 +332,7 @@ exports[`NameContainer should render correctly 1`] = `
             ]
           }
         >
-          Continuar
+          Criar carteira
         </Text>
         <View />
       </View>
