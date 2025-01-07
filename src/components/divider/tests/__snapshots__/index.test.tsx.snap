@@ -5,7 +5,7 @@ exports[`Divider renders correctly 1`] = `
   style={
     {
       "backgroundColor": "#FFFFFF33",
-      "height": 2.5,
+      "height": 2,
       "width": "100%",
     }
   }

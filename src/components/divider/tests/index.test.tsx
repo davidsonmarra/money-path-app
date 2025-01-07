@@ -36,7 +36,7 @@ describe('Divider', () => {
 
     it('renders medium horizontal divider', () => {
       const divider = renderComponent({size: DividerSize.medium}).root;
-      expect(divider.props.style.height).toBe(2.5);
+      expect(divider.props.style.height).toBe(2);
     });
 
     it('renders large horizontal divider', () => {
@@ -64,7 +64,7 @@ describe('Divider', () => {
         type: DividerType.vertical,
         size: DividerSize.medium,
       }).root;
-      expect(divider.props.style.width).toBe(2.5);
+      expect(divider.props.style.width).toBe(2);
     });
 
     it('renders large vertical divider', () => {

@@ -20,7 +20,7 @@ export interface Props {
 
 const getSize = () => ({
   [DividerSize.small]: 1,
-  [DividerSize.medium]: 2.5,
+  [DividerSize.medium]: 2,
   [DividerSize.large]: 5,
 });
 
