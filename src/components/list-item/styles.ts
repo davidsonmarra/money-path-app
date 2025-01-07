@@ -1,27 +1,25 @@
 import {StyleSheet} from 'react-native';
-import {useTheme} from 'src/hooks/useTheme';
 
-interface Props {
-  backgroundColor?: string;
-}
+interface Props {}
 
-const useStyles = ({backgroundColor}: Props) => {
-  const {colors} = useTheme().theme;
-
+const useStyles = ({}: Props) => {
   return StyleSheet.create({
-    container: {
-      paddingVertical: 12,
+    main: {
       flexDirection: 'row',
+      justifyContent: 'space-between',
       alignItems: 'center',
     },
-    icon: {
-      marginRight: 16,
-      width: 48,
-      height: 48,
-      borderRadius: 24,
-      backgroundColor: backgroundColor ?? colors.secondary,
-      justifyContent: 'center',
-      alignItems: 'center',
+    leadingContainer: {
+      marginLeft: 10,
+    },
+    trailingContainer: {
+      marginRight: 10,
+      flex: 1,
+      alignItems: 'flex-end',
+    },
+    contentContainer: {
+      flex: 1,
+      paddingHorizontal: 10,
     },
   });
 };

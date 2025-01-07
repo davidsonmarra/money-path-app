@@ -1,12 +1,15 @@
+import {render} from '@testing-library/react-native';
 import React from 'react';
 import {SectionList, SectionListRenderItem, View} from 'react-native';
 import {IconType} from 'src/assets/icons/types';
+import renderIcon from 'src/assets/icons/utils';
 import {Divider, Header, ListItem, Text, TextType} from 'src/components';
 import useStyles from 'src/features/add-wallet/screens/select-institution/ui/styles';
 import {
   InstitutionProps,
   SelectInstitutionSection,
 } from 'src/features/add-wallet/types';
+import {useTheme} from 'src/hooks/useTheme';
 
 interface Props {
   onBack: () => void;
@@ -77,20 +80,38 @@ const data: SelectInstitutionSection[] = [
 const renderItem =
   (
     selectInstitution: (institution: InstitutionProps) => void,
+    renderLeading: (
+      icon: IconType,
+      backgroundColor?: string,
+    ) => React.ReactElement,
   ): SectionListRenderItem<InstitutionProps> =>
   ({index, item}) =>
     (
       <ListItem
-        text={item.name}
-        icon={item.icon}
-        backgroundColor={item.backgroundColor}
+        content={{
+          type: 'simple',
+          label: item.name,
+        }}
+        leading={renderLeading(item.icon, item.backgroundColor)}
+        navigationIndicator
         testID={`btn-list-item-${index}`}
         onPress={() => selectInstitution(item)}
       />
     );
 
 const SelectInstitutionContainer = ({onBack, selectInstitution}: Props) => {
-  const styles = useStyles();
+  const {colors} = useTheme().theme;
+  const styles = useStyles({});
+
+  const renderLeading = (icon: IconType, backgroundColor?: string) => (
+    <View style={[styles.icon, {backgroundColor}]}>
+      {renderIcon(icon)({
+        color: colors.primary,
+        size: 32,
+      })}
+    </View>
+  );
+
   return (
     <>
       <Header onLeftIconPress={onBack} text="Selecione a Instituição" />
@@ -98,12 +119,16 @@ const SelectInstitutionContainer = ({onBack, selectInstitution}: Props) => {
         <SectionList<InstitutionProps>
           sections={data}
           keyExtractor={item => item.name}
-          renderItem={renderItem(selectInstitution)}
+          renderItem={renderItem(selectInstitution, renderLeading)}
           renderSectionHeader={({section: {title}}) => (
             <Text type={TextType.textBold}>{title}</Text>
           )}
-          ItemSeparatorComponent={() => <Divider />}
-          SectionSeparatorComponent={() => <View style={{marginBottom: 16}} />}
+          ItemSeparatorComponent={() => (
+            <View style={{marginVertical: 12}}>
+              <Divider />
+            </View>
+          )}
+          SectionSeparatorComponent={() => <View style={{marginBottom: 24}} />}
           stickySectionHeadersEnabled={false}
           contentContainerStyle={styles.sectionListContent}
           showsVerticalScrollIndicator={false}
