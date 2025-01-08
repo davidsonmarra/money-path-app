@@ -6,7 +6,7 @@ export interface InstitutionProps {
   color?: string;
   backgroundColor?: string;
   type: 'personal' | 'bank';
-  amount: number;
+  amount?: number;
 }
 
 export type SelectInstitutionSection = {
