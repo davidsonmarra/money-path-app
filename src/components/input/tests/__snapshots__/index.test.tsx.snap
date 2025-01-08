@@ -19,7 +19,7 @@ exports[`Input renders correctly 1`] = `
     editable={true}
     onBlur={[Function]}
     onFocus={[Function]}
-    placeholderTextColor="#FFFFFF55"
+    placeholderTextColor="#FFFFFF65"
     selectTextOnFocus={true}
     style={
       {

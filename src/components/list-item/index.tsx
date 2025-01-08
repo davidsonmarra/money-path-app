@@ -29,7 +29,7 @@ const ListItem = ({
   testID,
   onPress,
 }: Props) => {
-  const styles = useStyles({});
+  const styles = useStyles();
   const {colors} = useTheme().theme;
 
   const renderNavigationIndicator = () => {

@@ -46,7 +46,9 @@ const SelectColorContainer = ({
               color: institution.color ?? colors.primary,
             })}
           </View>
-          <Text type={TextType.textBold}>Escolha uma cor para o ícone:</Text>
+          <Text type={TextType.textMediumMedium}>
+            Escolha uma cor para o ícone:
+          </Text>
           <View style={styles.colorWrapper}>
             {colorsForIcon.map(color => (
               <TouchableOpacity
@@ -66,7 +68,9 @@ const SelectColorContainer = ({
               </TouchableOpacity>
             ))}
           </View>
-          <Text type={TextType.textBold}>Escolha uma cor para o fundo:</Text>
+          <Text type={TextType.textMediumMedium}>
+            Escolha uma cor para o fundo:
+          </Text>
           <View style={styles.colorWrapper}>
             {colorsForIcon.map(color => (
               <TouchableOpacity

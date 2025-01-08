@@ -117,9 +117,10 @@ exports[`SelectInstitutionContainer should render correctly 1`] = `
       style={
         [
           {
-            "color": "#FFF",
-            "fontSize": 20,
-            "fontWeight": "bold",
+            "color": "#D9D9D9",
+            "fontSize": 16,
+            "fontWeight": 600,
+            "lineHeight": 16,
           },
           {
             "color": "#FFF",
@@ -230,11 +231,16 @@ exports[`SelectInstitutionContainer should render correctly 1`] = `
           <Text
             style={
               [
-                {
-                  "color": "#D9D9D9",
-                  "fontSize": 16,
-                  "fontWeight": "bold",
-                },
+                [
+                  {
+                    "color": "#D9D9D9",
+                    "fontSize": 14,
+                    "lineHeight": 20,
+                  },
+                  {
+                    "fontWeight": 500,
+                  },
+                ],
                 undefined,
               ]
             }
@@ -383,11 +389,16 @@ exports[`SelectInstitutionContainer should render correctly 1`] = `
                 <Text
                   style={
                     [
-                      {
-                        "color": "#D9D9D9",
-                        "fontSize": 16,
-                        "fontWeight": "normal",
-                      },
+                      [
+                        {
+                          "color": "#D9D9D9",
+                          "fontSize": 14,
+                          "lineHeight": 20,
+                        },
+                        {
+                          "fontWeight": 500,
+                        },
+                      ],
                       undefined,
                     ]
                   }
@@ -603,11 +614,16 @@ exports[`SelectInstitutionContainer should render correctly 1`] = `
                 <Text
                   style={
                     [
-                      {
-                        "color": "#D9D9D9",
-                        "fontSize": 16,
-                        "fontWeight": "normal",
-                      },
+                      [
+                        {
+                          "color": "#D9D9D9",
+                          "fontSize": 14,
+                          "lineHeight": 20,
+                        },
+                        {
+                          "fontWeight": 500,
+                        },
+                      ],
                       undefined,
                     ]
                   }
@@ -692,11 +708,16 @@ exports[`SelectInstitutionContainer should render correctly 1`] = `
           <Text
             style={
               [
-                {
-                  "color": "#D9D9D9",
-                  "fontSize": 16,
-                  "fontWeight": "bold",
-                },
+                [
+                  {
+                    "color": "#D9D9D9",
+                    "fontSize": 14,
+                    "lineHeight": 20,
+                  },
+                  {
+                    "fontWeight": 500,
+                  },
+                ],
                 undefined,
               ]
             }
@@ -869,11 +890,16 @@ exports[`SelectInstitutionContainer should render correctly 1`] = `
                 <Text
                   style={
                     [
-                      {
-                        "color": "#D9D9D9",
-                        "fontSize": 16,
-                        "fontWeight": "normal",
-                      },
+                      [
+                        {
+                          "color": "#D9D9D9",
+                          "fontSize": 14,
+                          "lineHeight": 20,
+                        },
+                        {
+                          "fontWeight": 500,
+                        },
+                      ],
                       undefined,
                     ]
                   }
@@ -1089,11 +1115,16 @@ exports[`SelectInstitutionContainer should render correctly 1`] = `
                 <Text
                   style={
                     [
-                      {
-                        "color": "#D9D9D9",
-                        "fontSize": 16,
-                        "fontWeight": "normal",
-                      },
+                      [
+                        {
+                          "color": "#D9D9D9",
+                          "fontSize": 14,
+                          "lineHeight": 20,
+                        },
+                        {
+                          "fontWeight": 500,
+                        },
+                      ],
                       undefined,
                     ]
                   }
@@ -1399,11 +1430,16 @@ exports[`SelectInstitutionContainer should render correctly 1`] = `
                 <Text
                   style={
                     [
-                      {
-                        "color": "#D9D9D9",
-                        "fontSize": 16,
-                        "fontWeight": "normal",
-                      },
+                      [
+                        {
+                          "color": "#D9D9D9",
+                          "fontSize": 14,
+                          "lineHeight": 20,
+                        },
+                        {
+                          "fontWeight": 500,
+                        },
+                      ],
                       undefined,
                     ]
                   }
@@ -1619,11 +1655,16 @@ exports[`SelectInstitutionContainer should render correctly 1`] = `
                 <Text
                   style={
                     [
-                      {
-                        "color": "#D9D9D9",
-                        "fontSize": 16,
-                        "fontWeight": "normal",
-                      },
+                      [
+                        {
+                          "color": "#D9D9D9",
+                          "fontSize": 14,
+                          "lineHeight": 20,
+                        },
+                        {
+                          "fontWeight": 500,
+                        },
+                      ],
                       undefined,
                     ]
                   }
@@ -1839,11 +1880,16 @@ exports[`SelectInstitutionContainer should render correctly 1`] = `
                 <Text
                   style={
                     [
-                      {
-                        "color": "#D9D9D9",
-                        "fontSize": 16,
-                        "fontWeight": "normal",
-                      },
+                      [
+                        {
+                          "color": "#D9D9D9",
+                          "fontSize": 14,
+                          "lineHeight": 20,
+                        },
+                        {
+                          "fontWeight": 500,
+                        },
+                      ],
                       undefined,
                     ]
                   }

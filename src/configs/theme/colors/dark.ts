@@ -12,10 +12,11 @@ export default {
   warningLight: '#FFA50030',
   title: '#FFF',
   text: '#D9D9D9',
+  description: '#FFFFFFAA',
   disabled: '#4F4F4F',
   buttonText: '#FFF',
   divider: '#FFFFFF33',
   inputDisabled: '#FFFFFF77',
-  placeholder: '#FFFFFF55',
+  placeholder: '#FFFFFF65',
   navigationIndicator: '#FFFFFF33',
 };

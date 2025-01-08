@@ -12,12 +12,12 @@ interface Props {
 const ListSettingsContainer = ({logout, toggleTheme}: Props) => {
   return (
     <SafeAreaView style={useStyles().container}>
-      <Text type={TextType.textBold}>List Settings</Text>
+      <Text type={TextType.textMediumMedium}>List Settings</Text>
       <TouchableOpacity onPress={logout}>
-        <Text type={TextType.textBold}>Logout</Text>
+        <Text type={TextType.textMediumMedium}>Logout</Text>
       </TouchableOpacity>
       <TouchableOpacity onPress={toggleTheme}>
-        <Text type={TextType.textBold}>Toggle Theme</Text>
+        <Text type={TextType.textMediumMedium}>Toggle Theme</Text>
       </TouchableOpacity>
     </SafeAreaView>
   );

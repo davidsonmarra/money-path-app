@@ -117,9 +117,10 @@ exports[`InitialValueContainer should render correctly 1`] = `
       style={
         [
           {
-            "color": "#FFF",
-            "fontSize": 20,
-            "fontWeight": "bold",
+            "color": "#D9D9D9",
+            "fontSize": 16,
+            "fontWeight": 600,
+            "lineHeight": 16,
           },
           {
             "color": "#FFF",
@@ -262,7 +263,7 @@ exports[`InitialValueContainer should render correctly 1`] = `
           onChangeText={[MockFunction]}
           onFocus={[Function]}
           placeholder="0,00"
-          placeholderTextColor="#FFFFFF55"
+          placeholderTextColor="#FFFFFF65"
           selectTextOnFocus={true}
           style={
             {
@@ -323,12 +324,19 @@ exports[`InitialValueContainer should render correctly 1`] = `
         <Text
           style={
             [
+              [
+                {
+                  "color": "#D9D9D9",
+                  "fontSize": 16,
+                  "lineHeight": 24,
+                },
+                {
+                  "fontWeight": 600,
+                },
+              ],
               {
                 "color": "#FFF",
-                "fontSize": 16,
-                "fontWeight": "bold",
               },
-              undefined,
             ]
           }
         >

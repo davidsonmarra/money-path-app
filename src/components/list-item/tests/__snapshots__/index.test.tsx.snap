@@ -32,11 +32,16 @@ exports[`ListItem renders correctly 1`] = `
         <Text
           style={
             [
-              {
-                "color": "#D9D9D9",
-                "fontSize": 16,
-                "fontWeight": "normal",
-              },
+              [
+                {
+                  "color": "#D9D9D9",
+                  "fontSize": 14,
+                  "lineHeight": 20,
+                },
+                {
+                  "fontWeight": 500,
+                },
+              ],
               undefined,
             ]
           }
@@ -46,12 +51,19 @@ exports[`ListItem renders correctly 1`] = `
         <Text
           style={
             [
+              [
+                {
+                  "color": "#D9D9D9",
+                  "fontSize": 12,
+                  "lineHeight": 16,
+                },
+                {
+                  "fontWeight": 400,
+                },
+              ],
               {
-                "color": "#D9D9D9",
-                "fontSize": 16,
-                "fontWeight": "normal",
+                "color": "#FFFFFFAA",
               },
-              undefined,
             ]
           }
         >

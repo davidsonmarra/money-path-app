@@ -4,11 +4,16 @@ exports[`Text renders correctly 1`] = `
 <Text
   style={
     [
-      {
-        "color": "#FFF",
-        "fontSize": 24,
-        "fontWeight": "bold",
-      },
+      [
+        {
+          "color": "#D9D9D9",
+          "fontSize": 12,
+          "lineHeight": 16,
+        },
+        {
+          "fontWeight": 400,
+        },
+      ],
       undefined,
     ]
   }

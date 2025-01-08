@@ -121,7 +121,7 @@ const SelectInstitutionContainer = ({onBack, selectInstitution}: Props) => {
           keyExtractor={item => item.name}
           renderItem={renderItem(selectInstitution, renderLeading)}
           renderSectionHeader={({section: {title}}) => (
-            <Text type={TextType.textBold}>{title}</Text>
+            <Text type={TextType.textMediumMedium}>{title}</Text>
           )}
           ItemSeparatorComponent={() => (
             <View style={{marginVertical: 12}}>

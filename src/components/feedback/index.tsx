@@ -54,10 +54,12 @@ const Feedback = ({
       <View />
       <View style={styles.infoWrapper}>
         {renderIconFeedback(type)}
-        <Text type={TextType.title} style={styles.text}>
+        <Text type={TextType.headingLarge} style={styles.text}>
           {title}
         </Text>
-        <Text type={TextType.text} style={styles.text}>
+        <Text
+          type={TextType.textMediumRegular}
+          style={[styles.text, styles.description]}>
           {description}
         </Text>
       </View>

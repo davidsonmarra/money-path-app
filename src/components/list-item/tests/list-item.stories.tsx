@@ -30,6 +30,17 @@ export default ListItemMeta;
 
 export const Simple: StoryObj<typeof ListItem> = {};
 
+export const SimpleWithThirdLine: StoryObj<typeof ListItem> = {
+  args: {
+    content: {
+      type: 'simple',
+      label: 'Label',
+      description: 'Description',
+      thirdLine: 'Third line',
+    },
+  },
+};
+
 export const Display: StoryObj<typeof ListItem> = {
   args: {
     content: {

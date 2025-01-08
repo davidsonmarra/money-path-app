@@ -11,6 +11,7 @@ export default {
   warning: '#FFA500',
   warningLight: '#FFA50030',
   title: '#000',
+  description: '#000E1897',
   text: '#000',
   disabled: '#4F4F4F',
   buttonText: '#FFF',

@@ -19,6 +19,9 @@ const useStyles = ({}: Props) => {
     text: {
       textAlign: 'center',
     },
+    description: {
+      color: colors.description,
+    },
     feedbackIconWrapper: {
       justifyContent: 'center',
       alignItems: 'center',

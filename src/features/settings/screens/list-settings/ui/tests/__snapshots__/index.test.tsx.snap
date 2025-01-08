@@ -32,11 +32,16 @@ exports[`LoginContainer should render correctly 1`] = `
     <Text
       style={
         [
-          {
-            "color": "#D9D9D9",
-            "fontSize": 16,
-            "fontWeight": "bold",
-          },
+          [
+            {
+              "color": "#D9D9D9",
+              "fontSize": 14,
+              "lineHeight": 20,
+            },
+            {
+              "fontWeight": 500,
+            },
+          ],
           undefined,
         ]
       }
@@ -80,11 +85,16 @@ exports[`LoginContainer should render correctly 1`] = `
       <Text
         style={
           [
-            {
-              "color": "#D9D9D9",
-              "fontSize": 16,
-              "fontWeight": "bold",
-            },
+            [
+              {
+                "color": "#D9D9D9",
+                "fontSize": 14,
+                "lineHeight": 20,
+              },
+              {
+                "fontWeight": 500,
+              },
+            ],
             undefined,
           ]
         }
@@ -129,11 +139,16 @@ exports[`LoginContainer should render correctly 1`] = `
       <Text
         style={
           [
-            {
-              "color": "#D9D9D9",
-              "fontSize": 16,
-              "fontWeight": "bold",
-            },
+            [
+              {
+                "color": "#D9D9D9",
+                "fontSize": 14,
+                "lineHeight": 20,
+              },
+              {
+                "fontWeight": 500,
+              },
+            ],
             undefined,
           ]
         }

@@ -23,7 +23,13 @@ const useStyles = ({isDisabled}: Props) => {
     primary: {
       backgroundColor: isDisabled ? colors.disabled : colors.primary,
     },
+    primaryText: {
+      color: colors.buttonText,
+    },
     secondary: {},
+    secondaryText: {
+      color: colors.secondary,
+    },
   });
 };
 

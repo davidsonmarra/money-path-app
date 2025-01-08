@@ -32,7 +32,7 @@ const LoginContainer = ({loginWithApple, loginWithGoogle}: Props) => {
       <View style={useStyles().logoContainer}>
         <MoneyPathIcon size={72} />
       </View>
-      <Text type={TextType.text}>
+      <Text type={TextType.textMediumRegular}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
         vestibulum, urna nec lacinia. Lorem ipsum dolor sit amet, consectetur
         adipiscing elit. Donec vestibulum, urna nec lacinia.

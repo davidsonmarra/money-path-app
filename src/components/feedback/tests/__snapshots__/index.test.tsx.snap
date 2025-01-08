@@ -93,9 +93,10 @@ exports[`Feedback renders correctly 1`] = `
       style={
         [
           {
-            "color": "#FFF",
+            "color": "#D9D9D9",
             "fontSize": 24,
-            "fontWeight": "bold",
+            "fontWeight": 600,
+            "lineHeight": 28,
           },
           {
             "textAlign": "center",
@@ -108,14 +109,24 @@ exports[`Feedback renders correctly 1`] = `
     <Text
       style={
         [
-          {
-            "color": "#D9D9D9",
-            "fontSize": 16,
-            "fontWeight": "normal",
-          },
-          {
-            "textAlign": "center",
-          },
+          [
+            {
+              "color": "#D9D9D9",
+              "fontSize": 14,
+              "lineHeight": 20,
+            },
+            {
+              "fontWeight": 400,
+            },
+          ],
+          [
+            {
+              "textAlign": "center",
+            },
+            {
+              "color": "#FFFFFFAA",
+            },
+          ],
         ]
       }
     />
@@ -167,12 +178,19 @@ exports[`Feedback renders correctly 1`] = `
     <Text
       style={
         [
+          [
+            {
+              "color": "#D9D9D9",
+              "fontSize": 16,
+              "lineHeight": 24,
+            },
+            {
+              "fontWeight": 600,
+            },
+          ],
           {
             "color": "#FFF",
-            "fontSize": 16,
-            "fontWeight": "bold",
           },
-          undefined,
         ]
       }
     >

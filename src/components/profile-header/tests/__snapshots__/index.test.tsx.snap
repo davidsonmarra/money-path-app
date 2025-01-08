@@ -42,11 +42,16 @@ exports[`ProfileHeader renders correctly 1`] = `
       <Text
         style={
           [
-            {
-              "color": "#D9D9D9",
-              "fontSize": 16,
-              "fontWeight": "normal",
-            },
+            [
+              {
+                "color": "#D9D9D9",
+                "fontSize": 14,
+                "lineHeight": 20,
+              },
+              {
+                "fontWeight": 400,
+              },
+            ],
             {
               "color": "#FFF",
             },
@@ -59,11 +64,16 @@ exports[`ProfileHeader renders correctly 1`] = `
       <Text
         style={
           [
-            {
-              "color": "#D9D9D9",
-              "fontSize": 16,
-              "fontWeight": "bold",
-            },
+            [
+              {
+                "color": "#D9D9D9",
+                "fontSize": 14,
+                "lineHeight": 20,
+              },
+              {
+                "fontWeight": 600,
+              },
+            ],
             {
               "color": "#FFF",
             },
@@ -115,11 +125,16 @@ exports[`ProfileHeader renders correctly 1`] = `
       <Text
         style={
           [
-            {
-              "color": "#D9D9D9",
-              "fontSize": 16,
-              "fontWeight": "bold",
-            },
+            [
+              {
+                "color": "#D9D9D9",
+                "fontSize": 14,
+                "lineHeight": 20,
+              },
+              {
+                "fontWeight": 600,
+              },
+            ],
             {
               "color": "#2A5C99",
             },

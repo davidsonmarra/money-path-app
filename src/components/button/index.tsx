@@ -22,14 +22,16 @@ export interface Props extends TouchableOpacityProps {
   isDisabled?: boolean;
 }
 
-const buttonProps = (isDisabled: boolean) => ({
+const getButtonProps = (isDisabled: boolean) => ({
   [ButtonType.primary]: {
     buttonStyle: useStyles({isDisabled}).primary,
-    textType: TextType.buttonPrimary,
+    textType: TextType.textLargeSemiBold,
+    textStyle: useStyles({isDisabled}).primaryText,
   },
   [ButtonType.secondary]: {
     buttonStyle: useStyles({isDisabled}).secondary,
-    textType: TextType.buttonSecondary,
+    textType: TextType.textLargeSemiBold,
+    textStyle: useStyles({isDisabled}).secondaryText,
   },
 });
 
@@ -44,12 +46,14 @@ const Button = ({
 }: Props) => {
   const {colors} = useTheme().theme;
 
+  const buttonProps = getButtonProps(isDisabled)[type];
+
   return (
     <TouchableOpacity
       disabled={isDisabled || isLoading}
       style={[
         useStyles({isDisabled}).container,
-        buttonProps(isDisabled)[type].buttonStyle,
+        buttonProps.buttonStyle,
         style,
       ]}
       {...rest}>
@@ -57,7 +61,9 @@ const Button = ({
       {isLoading ? (
         <ActivityIndicator size={38} color={colors.buttonText} />
       ) : (
-        <Text type={buttonProps(isDisabled)[type].textType}>{text}</Text>
+        <Text type={buttonProps.textType} style={buttonProps.textStyle}>
+          {text}
+        </Text>
       )}
       <View />
     </TouchableOpacity>

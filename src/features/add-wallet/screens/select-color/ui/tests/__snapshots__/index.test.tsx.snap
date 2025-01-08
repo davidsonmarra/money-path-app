@@ -117,9 +117,10 @@ exports[`SelectColorContainer should render correctly 1`] = `
       style={
         [
           {
-            "color": "#FFF",
-            "fontSize": 20,
-            "fontWeight": "bold",
+            "color": "#D9D9D9",
+            "fontSize": 16,
+            "fontWeight": 600,
+            "lineHeight": 16,
           },
           {
             "color": "#FFF",
@@ -221,11 +222,16 @@ exports[`SelectColorContainer should render correctly 1`] = `
       <Text
         style={
           [
-            {
-              "color": "#D9D9D9",
-              "fontSize": 16,
-              "fontWeight": "bold",
-            },
+            [
+              {
+                "color": "#D9D9D9",
+                "fontSize": 14,
+                "lineHeight": 20,
+              },
+              {
+                "fontWeight": 500,
+              },
+            ],
             undefined,
           ]
         }
@@ -619,11 +625,16 @@ exports[`SelectColorContainer should render correctly 1`] = `
       <Text
         style={
           [
-            {
-              "color": "#D9D9D9",
-              "fontSize": 16,
-              "fontWeight": "bold",
-            },
+            [
+              {
+                "color": "#D9D9D9",
+                "fontSize": 14,
+                "lineHeight": 20,
+              },
+              {
+                "fontWeight": 500,
+              },
+            ],
             undefined,
           ]
         }
@@ -1055,12 +1066,19 @@ exports[`SelectColorContainer should render correctly 1`] = `
       <Text
         style={
           [
+            [
+              {
+                "color": "#D9D9D9",
+                "fontSize": 16,
+                "lineHeight": 24,
+              },
+              {
+                "fontWeight": 600,
+              },
+            ],
             {
               "color": "#FFF",
-              "fontSize": 16,
-              "fontWeight": "bold",
             },
-            undefined,
           ]
         }
       >

@@ -143,12 +143,19 @@ exports[`Button renders correctly 1`] = `
   <Text
     style={
       [
+        [
+          {
+            "color": "#D9D9D9",
+            "fontSize": 16,
+            "lineHeight": 24,
+          },
+          {
+            "fontWeight": 600,
+          },
+        ],
         {
           "color": "#2A5C99",
-          "fontSize": 16,
-          "fontWeight": "bold",
         },
-        undefined,
       ]
     }
   >

@@ -30,7 +30,7 @@ const Header = ({
           color: style.textColor.color,
         })}
       </TouchableOpacity>
-      <Text type={TextType.header} style={style.textColor}>
+      <Text type={TextType.headingXSmall} style={style.textColor}>
         {text}
       </Text>
       <View />

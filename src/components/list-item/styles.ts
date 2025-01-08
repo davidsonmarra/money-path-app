@@ -1,8 +1,6 @@
 import {StyleSheet} from 'react-native';
 
-interface Props {}
-
-const useStyles = ({}: Props) => {
+const useStyles = () => {
   return StyleSheet.create({
     main: {
       flexDirection: 'row',

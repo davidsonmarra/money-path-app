@@ -16,10 +16,10 @@ const ProfileHeader = ({name, abbreviation, onPressProfileImage}: Props) => {
   return (
     <SafeAreaView style={style.container} edges={['top']}>
       <View style={style.infoContainer}>
-        <Text type={TextType.text} style={style.textColor}>
+        <Text type={TextType.textMediumRegular} style={style.textColor}>
           Olá,{' '}
         </Text>
-        <Text type={TextType.textBold} style={style.textColor}>
+        <Text type={TextType.textMediumSemiBold} style={style.textColor}>
           {name}
         </Text>
       </View>
@@ -27,7 +27,9 @@ const ProfileHeader = ({name, abbreviation, onPressProfileImage}: Props) => {
         onPress={onPressProfileImage}
         style={useStyles().profileImage}
         testID="profile-image">
-        <Text type={TextType.textBold} style={useStyles().textNameAbbreviation}>
+        <Text
+          type={TextType.textMediumSemiBold}
+          style={useStyles().textNameAbbreviation}>
           {abbreviation}
         </Text>
       </TouchableOpacity>
