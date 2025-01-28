@@ -1,22 +1,24 @@
-import {create} from 'zustand';
-import {devtools} from 'zustand/middleware';
-import {InstitutionProps} from 'src/features/add-wallet/types';
+import {useFormContext} from 'react-hook-form';
+import {AddWalletFormValues} from 'src/features/add-wallet/context/add-wallet-form/schema';
 
-interface AddWalletFormState {
-  institution: InstitutionProps | null;
-  setInstitution: (institution: InstitutionProps) => void;
-}
+const useAddWalletForm = () => {
+  const {
+    register,
+    setValue,
+    handleSubmit,
+    watch,
+    getValues,
+    formState: {errors},
+  } = useFormContext<AddWalletFormValues>();
 
-const useAddWalletForm = create<AddWalletFormState>()(
-  devtools(
-    set => ({
-      institution: null,
-      setInstitution: institution => set(() => ({institution})),
-    }),
-    {
-      name: 'add-wallet-form',
-    },
-  ),
-);
+  return {
+    register,
+    setValue,
+    handleSubmit,
+    watch,
+    getValues,
+    errors,
+  };
+};
 
 export default useAddWalletForm;

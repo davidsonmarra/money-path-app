@@ -4,7 +4,7 @@ import {StackNavigationProp} from '@react-navigation/stack';
 import {PrivateStackParamList} from 'src/features/navigation';
 import SelectInstitutionContainer from 'src/features/add-wallet/screens/select-institution/ui';
 import useAddWalletForm from 'src/features/add-wallet/hooks/use-add-wallet-form';
-import {InstitutionProps} from 'src/features/add-wallet/types';
+import {WalletProps} from 'src/features/add-wallet/types';
 
 type AddWalletScreenNavigationProp = StackNavigationProp<
   PrivateStackParamList,
@@ -12,11 +12,15 @@ type AddWalletScreenNavigationProp = StackNavigationProp<
 >;
 
 const SelectInstitutionScreen = () => {
-  const {setInstitution} = useAddWalletForm();
+  const {setValue} = useAddWalletForm();
   const navigation = useNavigation<AddWalletScreenNavigationProp>();
 
-  const handleSelectInstitution = (institution: InstitutionProps) => {
-    setInstitution(institution);
+  const handleSelectInstitution = (institution: WalletProps) => {
+    setValue('name', institution.name);
+    setValue('icon', institution.icon);
+    setValue('color', institution.color ?? '');
+    setValue('backgroundColor', institution.backgroundColor ?? '');
+    setValue('type', institution.type);
 
     institution.type === 'personal'
       ? navigation.navigate('AddWalletStack', {

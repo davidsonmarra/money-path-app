@@ -1,6 +1,6 @@
 import {IconType} from 'src/assets/icons/types';
 
-export interface InstitutionProps {
+export interface WalletProps {
   name: string;
   icon: IconType;
   color?: string;
@@ -9,7 +9,7 @@ export interface InstitutionProps {
   amount?: number;
 }
 
-export type SelectInstitutionSection = {
+export type SelectWalletSection = {
   title: string;
-  data: InstitutionProps[];
+  data: WalletProps[];
 };

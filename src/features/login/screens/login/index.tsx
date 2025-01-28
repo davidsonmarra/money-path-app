@@ -17,6 +17,10 @@ async function onGoogleButtonPress() {
 
   await firebase.auth().signInWithCredential(googleCredential);
   await firebase.auth().currentUser?.getIdToken();
+  console.log(
+    'googleCredential',
+    await firebase.auth().currentUser?.getIdToken(),
+  );
 }
 
 const LoginScreen = () => {

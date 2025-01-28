@@ -6,6 +6,8 @@ import FeedbackContainer, {
 } from 'src/features/add-wallet/screens/feedback/ui';
 import {PrivateStackParamList} from 'src/features/navigation';
 import useAddWalletForm from 'src/features/add-wallet/hooks/use-add-wallet-form';
+import {createWallet} from 'src/features/add-wallet/service';
+import {WalletProps} from '../../types';
 
 type AddWalletScreenNavigationProp = StackNavigationProp<
   PrivateStackParamList,
@@ -14,14 +16,17 @@ type AddWalletScreenNavigationProp = StackNavigationProp<
 
 const FeedbackScreen = () => {
   const [state, setState] = useState(States.loading);
-  const {institution} = useAddWalletForm();
+  const {getValues} = useAddWalletForm();
   const navigation = useNavigation<AddWalletScreenNavigationProp>();
 
   const crateWallet = async () => {
     setState(States.loading);
-    setTimeout(() => {
+    try {
+      await createWallet(getValues() as WalletProps);
       setState(States.default);
-    }, 2000);
+    } catch (error) {
+      setState(States.error);
+    }
   };
 
   const backToHome = () => {

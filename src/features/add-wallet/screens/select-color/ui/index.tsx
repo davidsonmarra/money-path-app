@@ -1,16 +1,19 @@
 import React from 'react';
 import {TouchableOpacity, View} from 'react-native';
 import {Header, Text, TextType, Button, ButtonType} from 'src/components';
-import {InstitutionProps} from 'src/features/add-wallet/types';
 import useStyles from 'src/features/add-wallet/screens/select-color/ui/styles';
 import renderIcon from 'src/assets/icons/utils';
 import {useTheme} from 'src/hooks/useTheme';
 import {SafeAreaView} from 'react-native-safe-area-context';
+import {IconType} from 'src/assets/icons/types';
 
 export interface Props {
-  institution: InstitutionProps;
+  backgroundColor?: string;
+  icon: IconType;
+  color?: string;
   onBack: () => void;
-  selectColor: (institution: InstitutionProps) => void;
+  setColor: (color: string) => void;
+  setBackgroundColor: (backgroundColor: string) => void;
   onConfirm: () => void;
 }
 
@@ -25,14 +28,17 @@ const colorsForIcon = [
 ];
 
 const SelectColorContainer = ({
-  institution,
+  backgroundColor,
+  icon,
+  color,
   onBack,
-  selectColor,
+  setColor,
+  setBackgroundColor,
   onConfirm,
 }: Props) => {
   const {colors} = useTheme().theme;
   const styles = useStyles({
-    backgroundColor: institution.backgroundColor ?? colors.secondary,
+    backgroundColor: backgroundColor ?? colors.secondary,
   });
 
   return (
@@ -41,28 +47,27 @@ const SelectColorContainer = ({
       <SafeAreaView edges={['bottom']} style={styles.container}>
         <View>
           <View style={styles.icon}>
-            {renderIcon(institution.icon)({
+            {renderIcon(icon)({
               size: 100,
-              color: institution.color ?? colors.primary,
+              color: color ?? colors.primary,
             })}
           </View>
           <Text type={TextType.textMediumMedium}>
             Escolha uma cor para o ícone:
           </Text>
           <View style={styles.colorWrapper}>
-            {colorsForIcon.map(color => (
+            {colorsForIcon.map(colorItem => (
               <TouchableOpacity
-                key={`icon-color-${color}`}
+                key={`icon-color-${colorItem}`}
                 onPress={() => {
-                  color !== institution.color &&
-                    selectColor({...institution, color: color});
+                  color !== colorItem && setColor(colorItem);
                 }}
-                testID={`btn-color-${color}`}>
+                testID={`btn-color-${colorItem}`}>
                 <View
                   style={[
                     styles.color,
-                    {backgroundColor: color},
-                    color === institution.color && styles.selectedColor,
+                    {backgroundColor: colorItem},
+                    colorItem === color && styles.selectedColor,
                   ]}
                 />
               </TouchableOpacity>
@@ -72,19 +77,18 @@ const SelectColorContainer = ({
             Escolha uma cor para o fundo:
           </Text>
           <View style={styles.colorWrapper}>
-            {colorsForIcon.map(color => (
+            {colorsForIcon.map(colorItem => (
               <TouchableOpacity
-                key={`btn-backgroundColor-${color}`}
+                key={`btn-backgroundColor-${colorItem}`}
                 onPress={() => {
-                  color !== institution.backgroundColor &&
-                    selectColor({...institution, backgroundColor: color});
+                  colorItem !== backgroundColor &&
+                    setBackgroundColor(colorItem);
                 }}>
                 <View
                   style={[
                     styles.color,
-                    {backgroundColor: color},
-                    color === institution.backgroundColor &&
-                      styles.selectedColor,
+                    {backgroundColor: colorItem},
+                    colorItem === backgroundColor && styles.selectedColor,
                   ]}
                 />
               </TouchableOpacity>

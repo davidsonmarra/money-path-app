@@ -3,7 +3,6 @@ import {useNavigation} from '@react-navigation/native';
 import {StackNavigationProp} from '@react-navigation/stack';
 import {PrivateStackParamList} from 'src/features/navigation';
 import useAddWalletForm from 'src/features/add-wallet/hooks/use-add-wallet-form';
-import {InstitutionProps} from 'src/features/add-wallet/types';
 import InitialValueContainer from 'src/features/add-wallet/screens/initial-value/ui';
 
 type AddWalletScreenNavigationProp = StackNavigationProp<
@@ -12,15 +11,10 @@ type AddWalletScreenNavigationProp = StackNavigationProp<
 >;
 
 const InitialValueScreen = () => {
-  const [value, setValue] = useState('');
-  const {institution, setInstitution} = useAddWalletForm();
+  const {watch, setValue} = useAddWalletForm();
   const {navigate, goBack} = useNavigation<AddWalletScreenNavigationProp>();
 
   const handleOnConfirm = () => {
-    setInstitution({
-      ...(institution as InstitutionProps),
-      amount: Number(value),
-    });
     navigate('AddWalletStack', {
       screen: 'Feedback',
     });
@@ -35,12 +29,12 @@ const InitialValueScreen = () => {
 
   const handleChangeText = (text: string) => {
     const numericValue = text.replace(/\D/g, '');
-    setValue(numericValue);
+    setValue('amount', Number(numericValue));
   };
 
   return (
     <InitialValueContainer
-      value={formatValue(value)}
+      value={formatValue(watch('amount')?.toString() ?? '')}
       onBack={goBack}
       setValue={handleChangeText}
       onConfirm={handleOnConfirm}

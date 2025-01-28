@@ -1,12 +1,15 @@
 import {render} from '@testing-library/react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
+import AddWalletFormContext from 'src/features/add-wallet/context/add-wallet-form';
 
 interface IAllThemeProviders {
   children: React.ReactElement;
 }
 
 const AllTheProviders = ({children}: IAllThemeProviders) => (
-  <SafeAreaView>{children}</SafeAreaView>
+  <AddWalletFormContext>
+    <SafeAreaView>{children}</SafeAreaView>
+  </AddWalletFormContext>
 );
 
 const customRender = (ui: React.ReactElement, options = {}) =>

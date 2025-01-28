@@ -13,8 +13,8 @@ const HomeScreen = () => {
   const navigation = useNavigation<HomeScreenNavigationProp>();
 
   const handleNavigateToSettings = () => {
-    navigation.navigate('SettingsStack', {
-      screen: 'ListSettingsScreen',
+    navigation.navigate('AddWalletStack', {
+      screen: 'SelectInstitution',
     });
   };
 

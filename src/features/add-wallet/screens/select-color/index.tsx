@@ -4,7 +4,7 @@ import {StackNavigationProp} from '@react-navigation/stack';
 import {PrivateStackParamList} from 'src/features/navigation';
 import SelectColorContainer from 'src/features/add-wallet/screens/select-color/ui';
 import useAddWalletForm from 'src/features/add-wallet/hooks/use-add-wallet-form';
-import {InstitutionProps} from 'src/features/add-wallet/types';
+import {IconType} from 'src/assets/icons/types';
 
 type AddWalletScreenNavigationProp = StackNavigationProp<
   PrivateStackParamList,
@@ -12,7 +12,7 @@ type AddWalletScreenNavigationProp = StackNavigationProp<
 >;
 
 const SelectColorScreen = () => {
-  const {institution, setInstitution} = useAddWalletForm();
+  const {watch, setValue} = useAddWalletForm();
   const navigation = useNavigation<AddWalletScreenNavigationProp>();
 
   const handleConfirm = () => {
@@ -23,9 +23,14 @@ const SelectColorScreen = () => {
 
   return (
     <SelectColorContainer
-      institution={institution as InstitutionProps}
+      color={watch('color')}
+      backgroundColor={watch('backgroundColor')}
+      icon={watch('icon') as IconType}
       onBack={navigation.goBack}
-      selectColor={setInstitution}
+      setColor={color => setValue('color', color)}
+      setBackgroundColor={backgroundColor =>
+        setValue('backgroundColor', backgroundColor)
+      }
       onConfirm={handleConfirm}
     />
   );

@@ -10,24 +10,8 @@ jest.mock('@react-navigation/native', () => ({
   useNavigation: jest.fn(() => mockNavigation),
 }));
 
-let mockInstitution = {
-  backgroundColor: '#2A5C99',
-  color: '#EAC43D',
-  icon: 'wallet',
-  name: '',
-  type: 'personal',
-};
-const mockSetInstitution = jest.fn().mockImplementation(institution => {
-  mockInstitution = institution;
-});
-jest.mock('src/features/add-wallet/hooks/use-add-wallet-form', () => () => ({
-  institution: mockInstitution,
-  setInstitution: mockSetInstitution,
-}));
-
 describe('NameScreen', () => {
   beforeEach(() => {
-    mockInstitution.name = '';
     jest.clearAllMocks();
   });
 
@@ -46,7 +30,7 @@ describe('NameScreen', () => {
     });
     const button = screen.getByTestId('btn-confirm');
     fireEvent.press(button);
-    expect(mockInstitution.name).toBe('Wallet Name');
+    expect(input.props.value).toBe('Wallet Name');
   });
 
   it('should navigate correctly when confirm', async () => {
