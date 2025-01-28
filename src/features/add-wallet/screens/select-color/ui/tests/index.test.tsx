@@ -4,28 +4,30 @@ import {fireEvent, render} from 'src/configs/test-utils';
 import SelectColorContainer, {
   Props,
 } from 'src/features/add-wallet/screens/select-color/ui';
-import {InstitutionProps} from 'src/features/add-wallet/types';
+import {WalletProps} from 'src/features/add-wallet/types';
 
-let mockInstitution: InstitutionProps = {
-  backgroundColor: '#2A5C99',
-  color: '#EAC43D',
-  icon: IconType.wallet,
-  name: 'Carteira',
-  type: 'personal',
-};
+let mockBackgroundColor = '#2A5C99';
+let mockColor = '#EAC43D';
 const mockOnBackPress = jest.fn();
-const mockSelectColor = jest
-  .fn()
-  .mockImplementation((institution: InstitutionProps) => {
-    mockInstitution = institution;
-  });
+const mockSetBackgroundColor = jest.fn().mockImplementation(() => {
+  mockBackgroundColor = '#2A5C99';
+});
+const mockSetColor = jest.fn().mockImplementation(() => {
+  mockColor = '#EAC43D';
+});
 const mockOnConfirm = jest.fn();
-const containerInstance = ({institution = mockInstitution}: Partial<Props>) =>
+const containerInstance = ({
+  color = mockColor,
+  backgroundColor = mockBackgroundColor,
+}: Partial<Props>) =>
   render(
     <SelectColorContainer
-      institution={institution}
+      color={color}
+      icon={IconType.wallet}
+      backgroundColor={backgroundColor}
       onBack={mockOnBackPress}
-      selectColor={mockSelectColor}
+      setBackgroundColor={mockSetBackgroundColor}
+      setColor={mockSetColor}
       onConfirm={mockOnConfirm}
     />,
   );
@@ -50,6 +52,6 @@ describe('SelectColorContainer', () => {
     const container = containerInstance({});
     const colorButton = container.getByTestId('btn-color-#EE82EE');
     fireEvent.press(colorButton);
-    expect(mockSelectColor).toHaveBeenCalledWith(mockInstitution);
+    expect(mockSetColor).toHaveBeenCalledWith('#EE82EE');
   });
 });

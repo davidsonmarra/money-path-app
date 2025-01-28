@@ -1,18 +1,13 @@
 import React from 'react';
-import {firebase} from '@react-native-firebase/auth';
 import ListSettingsContainer from 'src/features/settings/screens/list-settings/ui';
 import {useTheme} from 'src/hooks/useTheme';
+import {useAuthStore} from 'src/hooks/useAuth';
 
 const ListSettingsScreen = () => {
   const {toggleTheme} = useTheme();
+  const {logout} = useAuthStore();
 
-  const handleLogout = () => {
-    firebase.auth().signOut();
-  };
-
-  return (
-    <ListSettingsContainer logout={handleLogout} toggleTheme={toggleTheme} />
-  );
+  return <ListSettingsContainer logout={logout} toggleTheme={toggleTheme} />;
 };
 
 export default ListSettingsScreen;

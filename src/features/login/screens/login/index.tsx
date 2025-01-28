@@ -1,37 +1,14 @@
 import React from 'react';
-import auth, {firebase} from '@react-native-firebase/auth';
-import {GoogleSignin} from '@react-native-google-signin/google-signin';
 import LoginContainer from 'src/features/login/screens/login/ui';
-
-async function onGoogleButtonPress() {
-  await GoogleSignin.hasPlayServices({showPlayServicesUpdateDialog: true});
-  const signInResult = await GoogleSignin.signIn();
-
-  const idToken = signInResult.data?.idToken;
-
-  if (!idToken) {
-    throw new Error('No ID token found');
-  }
-
-  const googleCredential = auth.GoogleAuthProvider.credential(idToken);
-
-  await firebase.auth().signInWithCredential(googleCredential);
-  await firebase.auth().currentUser?.getIdToken();
-  console.log(
-    'googleCredential',
-    await firebase.auth().currentUser?.getIdToken(),
-  );
-}
+import {useAuthStore} from 'src/hooks/useAuth';
 
 const LoginScreen = () => {
-  const handleLoginWithApple = () => {
-    console.log('Login with Apple');
-  };
+  const {loginWithGoogle, loginWithApple} = useAuthStore();
 
   return (
     <LoginContainer
-      loginWithApple={handleLoginWithApple}
-      loginWithGoogle={onGoogleButtonPress}
+      loginWithApple={loginWithApple}
+      loginWithGoogle={loginWithGoogle}
     />
   );
 };

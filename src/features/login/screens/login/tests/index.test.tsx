@@ -2,8 +2,25 @@ import React from 'react';
 import {mockGoogleSignIn} from 'src/__mocks__';
 import {screen, render} from 'src/configs/test-utils';
 import LoginScreen from 'src/features/login/screens/login';
+import {useAuthStore} from 'src/hooks/useAuth';
+
+jest.mock('src/hooks/useAuth', () => ({
+  useAuthStore: jest.fn(),
+}));
+
+const mockLoginWithGoogle = jest.fn();
+const mockLoginWithApple = jest.fn();
+
+(useAuthStore as unknown as jest.Mock).mockImplementation(() => ({
+  loginWithGoogle: mockLoginWithGoogle,
+  loginWithApple: mockLoginWithApple,
+}));
 
 describe('LoginScreen', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
   it('should render the login screen', () => {
     render(<LoginScreen />);
     expect(
@@ -20,16 +37,10 @@ describe('LoginScreen', () => {
     });
 
     it('should call loginWithGoogle when google button is pressed', async () => {
-      mockGoogleSignIn.signIn.mockResolvedValueOnce({
-        data: {
-          idToken: 'idToken',
-        },
-      });
-
       const {getByTestId} = render(<LoginScreen />);
       const googleButton = getByTestId('btn-google');
       await googleButton.props.onClick();
-      expect(mockGoogleSignIn.signIn).toHaveBeenCalled();
+      expect(mockLoginWithGoogle).toHaveBeenCalled();
     });
   });
 
