@@ -1,7 +1,7 @@
 import React from 'react';
-import {createStackNavigator} from '@react-navigation/stack';
-import {NavigatorScreenParams} from '@react-navigation/native';
-import HomeStack, {HomeStackParamList} from 'src/features/home/navigation';
+import { createStackNavigator } from '@react-navigation/stack';
+import { NavigatorScreenParams } from '@react-navigation/native';
+import HomeStack, { HomeStackParamList } from 'src/features/home/navigation';
 import AddWalletStack, {
   AddWalletStackParamList,
 } from 'src/features/add-wallet/navigation';
@@ -9,20 +9,24 @@ import SettingsStack, {
   SettingsStackParamList,
 } from 'src/features/settings/navigation';
 import LoginScreen from 'src/features/login/screens/login';
+import MakeTransferStack, {
+  MakeTransferStackParamList,
+} from 'src/features/make-transfer/navigation';
 
 export type PrivateStackParamList = {
   AddWalletStack: NavigatorScreenParams<AddWalletStackParamList>;
   HomeStack: NavigatorScreenParams<HomeStackParamList>;
   SettingsStack: NavigatorScreenParams<SettingsStackParamList>;
+  MakeTransferStack: NavigatorScreenParams<MakeTransferStackParamList>;
 };
 
 export type PublicStackParamList = {
   Login: undefined;
 };
 
-const {Navigator: PrivateNavigator, Screen: PrivateScreen} =
+const { Navigator: PrivateNavigator, Screen: PrivateScreen } =
   createStackNavigator<PrivateStackParamList>();
-const {Navigator: PublicNavigator, Screen: PublicScreen} =
+const { Navigator: PublicNavigator, Screen: PublicScreen } =
   createStackNavigator<PublicStackParamList>();
 
 export const PrivateStack = () => {
@@ -30,10 +34,12 @@ export const PrivateStack = () => {
     <PrivateNavigator
       screenOptions={{
         headerShown: false,
-      }}>
+      }}
+    >
       <PrivateScreen name="HomeStack" component={HomeStack} />
       <PrivateScreen name="SettingsStack" component={SettingsStack} />
       <PrivateScreen name="AddWalletStack" component={AddWalletStack} />
+      <PrivateScreen name="MakeTransferStack" component={MakeTransferStack} />
     </PrivateNavigator>
   );
 };
@@ -43,7 +49,8 @@ export const PublicStack = () => {
     <PublicNavigator
       screenOptions={{
         headerShown: false,
-      }}>
+      }}
+    >
       <PublicScreen name="Login" component={LoginScreen} />
     </PublicNavigator>
   );

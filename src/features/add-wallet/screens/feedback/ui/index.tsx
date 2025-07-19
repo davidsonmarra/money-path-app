@@ -1,10 +1,10 @@
 import React from 'react';
-import {ActivityIndicator, View} from 'react-native';
-import {SafeAreaView} from 'react-native-safe-area-context';
-import {CloseIcon} from 'src/assets/icons';
-import {Feedback, FeedbackType, Header} from 'src/components';
+import { ActivityIndicator, View } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { CloseIcon } from 'src/assets/icons';
+import { Feedback, FeedbackType, Header } from 'src/components';
 import useStyles from 'src/features/add-wallet/screens/feedback/ui/styles';
-import {useTheme} from 'src/hooks/useTheme';
+import { useTheme } from 'src/hooks/useTheme';
 
 export enum States {
   default = 'default',
@@ -18,8 +18,8 @@ interface Props {
   onPress: () => void;
 }
 
-const FeedbackContainer = ({state, onClose, onPress}: Props) => {
-  const {colors} = useTheme().theme;
+const FeedbackContainer = ({ state, onClose, onPress }: Props) => {
+  const { colors } = useTheme().theme;
   const styles = useStyles();
 
   const renderLoading = () => (

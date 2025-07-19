@@ -1,0 +1,289 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IconRound renders correctly 1`] = `
+<View
+  style={
+    [
+      {
+        "alignItems": "center",
+        "borderRadius": 24,
+        "height": 48,
+        "justifyContent": "center",
+        "width": 48,
+      },
+      {
+        "backgroundColor": undefined,
+      },
+    ]
+  }
+>
+  <RNSVGSvgView
+    align="xMidYMid"
+    bbHeight={32}
+    bbWidth={32}
+    fill="#EAC43D"
+    focusable={false}
+    height={32}
+    meetOrSlice={0}
+    minX={0}
+    minY={-960}
+    style={
+      [
+        {
+          "backgroundColor": "transparent",
+          "borderWidth": 0,
+        },
+        {
+          "flex": 0,
+          "height": 32,
+          "width": 32,
+        },
+      ]
+    }
+    testID="icon-wallet"
+    vbHeight={960}
+    vbWidth={960}
+    width={32}
+  >
+    <RNSVGGroup
+      fill={
+        {
+          "payload": 4293575741,
+          "type": 0,
+        }
+      }
+      propList={
+        [
+          "fill",
+        ]
+      }
+    >
+      <RNSVGPath
+        d="M240-160q-66 0-113-47T80-320v-320q0-66 47-113t113-47h480q66 0 113 47t47 113v320q0 66-47 113t-113 47zm0-480h480q22 0 42 5t38 16v-21q0-33-23.5-56.5T720-720H240q-33 0-56.5 23.5T160-640v21q18-11 38-16t42-5m-74 130 445 108q9 2 18 0t17-8l139-116q-11-15-28-24.5t-37-9.5H240q-26 0-45.5 13.5T166-510"
+        fill={
+          {
+            "payload": 4278190080,
+            "type": 0,
+          }
+        }
+      />
+    </RNSVGGroup>
+  </RNSVGSvgView>
+</View>
+`;
+
+exports[`IconRound renders with different icon types correctly 1`] = `
+<View
+  style={
+    [
+      {
+        "alignItems": "center",
+        "borderRadius": 24,
+        "height": 48,
+        "justifyContent": "center",
+        "width": 48,
+      },
+      {
+        "backgroundColor": undefined,
+      },
+    ]
+  }
+>
+  <RNSVGSvgView
+    align="xMidYMid"
+    bbHeight={32}
+    bbWidth={32}
+    fill="#EAC43D"
+    focusable={false}
+    height={32}
+    meetOrSlice={0}
+    minX={0}
+    minY={-960}
+    style={
+      [
+        {
+          "backgroundColor": "transparent",
+          "borderWidth": 0,
+        },
+        {
+          "flex": 0,
+          "height": 32,
+          "width": 32,
+        },
+      ]
+    }
+    testID="icon-bank"
+    vbHeight={960}
+    vbWidth={960}
+    width={32}
+  >
+    <RNSVGGroup
+      fill={
+        {
+          "payload": 4293575741,
+          "type": 0,
+        }
+      }
+      propList={
+        [
+          "fill",
+        ]
+      }
+    >
+      <RNSVGPath
+        d="M200-280v-280h80v280zm240 0v-280h80v280zM80-120v-80h800v80zm600-160v-280h80v280zM80-640v-80l400-200 400 200v80zm178-80h444zm0 0h444L480-830z"
+        fill={
+          {
+            "payload": 4278190080,
+            "type": 0,
+          }
+        }
+      />
+    </RNSVGGroup>
+  </RNSVGSvgView>
+</View>
+`;
+
+exports[`IconRound renders with different icon types correctly 2`] = `
+<View
+  style={
+    [
+      {
+        "alignItems": "center",
+        "borderRadius": 24,
+        "height": 48,
+        "justifyContent": "center",
+        "width": 48,
+      },
+      {
+        "backgroundColor": undefined,
+      },
+    ]
+  }
+>
+  <RNSVGSvgView
+    align="xMidYMid"
+    bbHeight={32}
+    bbWidth={32}
+    fill="#EAC43D"
+    focusable={false}
+    height={32}
+    meetOrSlice={0}
+    minX={0}
+    minY={-960}
+    style={
+      [
+        {
+          "backgroundColor": "transparent",
+          "borderWidth": 0,
+        },
+        {
+          "flex": 0,
+          "height": 32,
+          "width": 32,
+        },
+      ]
+    }
+    testID="icon-money"
+    vbHeight={960}
+    vbWidth={960}
+    width={32}
+  >
+    <RNSVGGroup
+      fill={
+        {
+          "payload": 4293575741,
+          "type": 0,
+        }
+      }
+      propList={
+        [
+          "fill",
+        ]
+      }
+    >
+      <RNSVGPath
+        d="M441-120v-86q-53-12-91.5-46T293-348l74-30q15 48 44.5 73t77.5 25q41 0 69.5-18.5T587-356q0-35-22-55.5T463-458q-86-27-118-64.5T313-614q0-65 42-101t86-41v-84h80v84q50 8 82.5 36.5T651-650l-74 32q-12-32-34-48t-60-16q-44 0-67 19.5T393-614q0 33 30 52t104 40q69 20 104.5 63.5T667-358q0 71-42 108t-104 46v84z"
+        fill={
+          {
+            "payload": 4278190080,
+            "type": 0,
+          }
+        }
+      />
+    </RNSVGGroup>
+  </RNSVGSvgView>
+</View>
+`;
+
+exports[`IconRound renders with different icon types correctly 3`] = `
+<View
+  style={
+    [
+      {
+        "alignItems": "center",
+        "borderRadius": 24,
+        "height": 48,
+        "justifyContent": "center",
+        "width": 48,
+      },
+      {
+        "backgroundColor": undefined,
+      },
+    ]
+  }
+>
+  <RNSVGSvgView
+    align="xMidYMid"
+    bbHeight={32}
+    bbWidth={32}
+    fill="#EAC43D"
+    focusable={false}
+    height={32}
+    meetOrSlice={0}
+    minX={0}
+    minY={-960}
+    style={
+      [
+        {
+          "backgroundColor": "transparent",
+          "borderWidth": 0,
+        },
+        {
+          "flex": 0,
+          "height": 32,
+          "width": 32,
+        },
+      ]
+    }
+    testID="icon-wallet"
+    vbHeight={960}
+    vbWidth={960}
+    width={32}
+  >
+    <RNSVGGroup
+      fill={
+        {
+          "payload": 4293575741,
+          "type": 0,
+        }
+      }
+      propList={
+        [
+          "fill",
+        ]
+      }
+    >
+      <RNSVGPath
+        d="M240-160q-66 0-113-47T80-320v-320q0-66 47-113t113-47h480q66 0 113 47t47 113v320q0 66-47 113t-113 47zm0-480h480q22 0 42 5t38 16v-21q0-33-23.5-56.5T720-720H240q-33 0-56.5 23.5T160-640v21q18-11 38-16t42-5m-74 130 445 108q9 2 18 0t17-8l139-116q-11-15-28-24.5t-37-9.5H240q-26 0-45.5 13.5T166-510"
+        fill={
+          {
+            "payload": 4278190080,
+            "type": 0,
+          }
+        }
+      />
+    </RNSVGGroup>
+  </RNSVGSvgView>
+</View>
+`;

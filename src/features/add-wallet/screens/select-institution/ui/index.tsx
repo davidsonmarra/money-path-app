@@ -1,22 +1,29 @@
-import {render} from '@testing-library/react-native';
+import { render } from '@testing-library/react-native';
 import React from 'react';
-import {SectionList, SectionListRenderItem, View} from 'react-native';
-import {IconType} from 'src/assets/icons/types';
+import { SectionList, SectionListRenderItem, View } from 'react-native';
+import { IconType } from 'src/assets/icons/types';
 import renderIcon from 'src/assets/icons/utils';
-import {Divider, Header, ListItem, Text, TextType} from 'src/components';
+import {
+  Divider,
+  Header,
+  IconRound,
+  ListItem,
+  Text,
+  TextType,
+} from 'src/components';
 import useStyles from 'src/features/add-wallet/screens/select-institution/ui/styles';
 import {
-  InstitutionProps,
-  SelectInstitutionSection,
+  WalletProps,
+  SelectWalletSection,
 } from 'src/features/add-wallet/types';
-import {useTheme} from 'src/hooks/useTheme';
+import { useTheme } from 'src/hooks/useTheme';
 
 interface Props {
   onBack: () => void;
-  selectInstitution: (institution: InstitutionProps) => void;
+  selectInstitution: (institution: WalletProps) => void;
 }
 
-const personalInstitutions: InstitutionProps[] = [
+const personalInstitutions: WalletProps[] = [
   {
     name: 'Carteira',
     icon: IconType.wallet,
@@ -33,7 +40,7 @@ const personalInstitutions: InstitutionProps[] = [
   },
 ];
 
-const banksInstitutions: InstitutionProps[] = [
+const banksInstitutions: WalletProps[] = [
   {
     name: 'Banco do Brasil',
     icon: IconType.bancoDoBrasil,
@@ -66,7 +73,7 @@ const banksInstitutions: InstitutionProps[] = [
   },
 ];
 
-const data: SelectInstitutionSection[] = [
+const data: SelectWalletSection[] = [
   {
     title: 'Personalizado',
     data: personalInstitutions,
@@ -79,13 +86,13 @@ const data: SelectInstitutionSection[] = [
 
 const renderItem =
   (
-    selectInstitution: (institution: InstitutionProps) => void,
+    selectInstitution: (institution: WalletProps) => void,
     renderLeading: (
       icon: IconType,
       backgroundColor?: string,
     ) => React.ReactElement,
-  ): SectionListRenderItem<InstitutionProps> =>
-  ({index, item}) =>
+  ): SectionListRenderItem<WalletProps> =>
+  ({ index, item }) =>
     (
       <ListItem
         content={{
@@ -99,36 +106,38 @@ const renderItem =
       />
     );
 
-const SelectInstitutionContainer = ({onBack, selectInstitution}: Props) => {
-  const {colors} = useTheme().theme;
+const SelectInstitutionContainer = ({ onBack, selectInstitution }: Props) => {
+  const { colors } = useTheme().theme;
   const styles = useStyles({});
 
   const renderLeading = (icon: IconType, backgroundColor?: string) => (
-    <View style={[styles.icon, {backgroundColor}]}>
-      {renderIcon(icon)({
-        color: colors.primary,
-        size: 32,
-      })}
-    </View>
+    <IconRound
+      icon={icon}
+      backgroundColor={backgroundColor}
+      color={colors.primary}
+      size={32}
+    />
   );
 
   return (
     <>
       <Header onLeftIconPress={onBack} text="Selecione a Instituição" />
       <View style={styles.container}>
-        <SectionList<InstitutionProps>
+        <SectionList<WalletProps>
           sections={data}
           keyExtractor={item => item.name}
           renderItem={renderItem(selectInstitution, renderLeading)}
-          renderSectionHeader={({section: {title}}) => (
+          renderSectionHeader={({ section: { title } }) => (
             <Text type={TextType.textMediumMedium}>{title}</Text>
           )}
           ItemSeparatorComponent={() => (
-            <View style={{marginVertical: 12}}>
+            <View style={{ marginVertical: 12 }}>
               <Divider />
             </View>
           )}
-          SectionSeparatorComponent={() => <View style={{marginBottom: 24}} />}
+          SectionSeparatorComponent={() => (
+            <View style={{ marginBottom: 24 }} />
+          )}
           stickySectionHeadersEnabled={false}
           contentContainerStyle={styles.sectionListContent}
           showsVerticalScrollIndicator={false}

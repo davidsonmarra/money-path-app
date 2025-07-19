@@ -1,7 +1,7 @@
-import {FirebaseAuthTypes} from '@react-native-firebase/auth';
-import {create} from 'zustand';
-import auth, {firebase} from '@react-native-firebase/auth';
-import {GoogleSignin} from '@react-native-google-signin/google-signin';
+import { FirebaseAuthTypes } from '@react-native-firebase/auth';
+import { create } from 'zustand';
+import auth, { firebase } from '@react-native-firebase/auth';
+import { GoogleSignin } from '@react-native-google-signin/google-signin';
 
 interface AuthStore {
   user: FirebaseAuthTypes.User | null;
@@ -19,12 +19,14 @@ export const useAuthStore = create<AuthStore>(set => ({
   user: null,
   isAuthenticated: false,
   token: null,
-  setUser: user => set({user}),
-  setIsAuthenticated: isAuthenticated => set({isAuthenticated}),
-  setToken: token => set({token}),
+  setUser: user => set({ user }),
+  setIsAuthenticated: isAuthenticated => set({ isAuthenticated }),
+  setToken: token => set({ token }),
   loginWithGoogle: async () => {
     try {
-      await GoogleSignin.hasPlayServices({showPlayServicesUpdateDialog: true});
+      await GoogleSignin.hasPlayServices({
+        showPlayServicesUpdateDialog: true,
+      });
       const signInResult = await GoogleSignin.signIn();
 
       const idToken = signInResult.data?.idToken;
@@ -47,7 +49,7 @@ export const useAuthStore = create<AuthStore>(set => ({
     }
   },
   loginWithApple: async () => {
-    // Implementar login com Apple
+    // TOOD: Implementar login com Apple
     console.log('Login with Apple');
   },
   logout: async () => {

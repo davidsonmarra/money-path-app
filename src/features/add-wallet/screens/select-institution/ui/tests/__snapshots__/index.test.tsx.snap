@@ -310,11 +310,9 @@ exports[`SelectInstitutionContainer should render correctly 1`] = `
                   [
                     {
                       "alignItems": "center",
-                      "backgroundColor": "#2A5C99",
                       "borderRadius": 24,
                       "height": 48,
                       "justifyContent": "center",
-                      "marginRight": 16,
                       "width": 48,
                     },
                     {
@@ -535,11 +533,9 @@ exports[`SelectInstitutionContainer should render correctly 1`] = `
                   [
                     {
                       "alignItems": "center",
-                      "backgroundColor": "#2A5C99",
                       "borderRadius": 24,
                       "height": 48,
                       "justifyContent": "center",
-                      "marginRight": 16,
                       "width": 48,
                     },
                     {
@@ -787,11 +783,9 @@ exports[`SelectInstitutionContainer should render correctly 1`] = `
                   [
                     {
                       "alignItems": "center",
-                      "backgroundColor": "#2A5C99",
                       "borderRadius": 24,
                       "height": 48,
                       "justifyContent": "center",
-                      "marginRight": 16,
                       "width": 48,
                     },
                     {
@@ -1036,11 +1030,9 @@ exports[`SelectInstitutionContainer should render correctly 1`] = `
                   [
                     {
                       "alignItems": "center",
-                      "backgroundColor": "#2A5C99",
                       "borderRadius": 24,
                       "height": 48,
                       "justifyContent": "center",
-                      "marginRight": 16,
                       "width": 48,
                     },
                     {
@@ -1261,11 +1253,9 @@ exports[`SelectInstitutionContainer should render correctly 1`] = `
                   [
                     {
                       "alignItems": "center",
-                      "backgroundColor": "#2A5C99",
                       "borderRadius": 24,
                       "height": 48,
                       "justifyContent": "center",
-                      "marginRight": 16,
                       "width": 48,
                     },
                     {
@@ -1576,11 +1566,9 @@ exports[`SelectInstitutionContainer should render correctly 1`] = `
                   [
                     {
                       "alignItems": "center",
-                      "backgroundColor": "#2A5C99",
                       "borderRadius": 24,
                       "height": 48,
                       "justifyContent": "center",
-                      "marginRight": 16,
                       "width": 48,
                     },
                     {
@@ -1801,11 +1789,9 @@ exports[`SelectInstitutionContainer should render correctly 1`] = `
                   [
                     {
                       "alignItems": "center",
-                      "backgroundColor": "#2A5C99",
                       "borderRadius": 24,
                       "height": 48,
                       "justifyContent": "center",
-                      "marginRight": 16,
                       "width": 48,
                     },
                     {
