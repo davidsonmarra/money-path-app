@@ -90,8 +90,8 @@ const CategoryScreen = ({ initialStatus = 'loading' }: Props) => {
   }, []);
 
   const handleOnConfirm = () => {
-    navigation.navigate('AddWalletStack', {
-      screen: 'InitialValue',
+    navigation.navigate('MakeTransferStack', {
+      screen: 'Title',
     });
   };
 

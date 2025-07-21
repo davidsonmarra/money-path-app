@@ -76,7 +76,7 @@ describe('CategoryScreen', () => {
     expect(getByText('Selecione uma categoria')).toBeTruthy();
   });
 
-  it('should navigate to AddWalletStack when onConfirm is called', () => {
+  it('should navigate to Title screen when onConfirm is called', () => {
     const mockCategories = [
       {
         id: '1',
@@ -97,8 +97,8 @@ describe('CategoryScreen', () => {
     fireEvent.press(getByText('Alimentação'));
     fireEvent.press(getByText('Continuar'));
 
-    expect(mockNavigate).toHaveBeenCalledWith('AddWalletStack', {
-      screen: 'InitialValue',
+    expect(mockNavigate).toHaveBeenCalledWith('MakeTransferStack', {
+      screen: 'Title',
     });
   });
 });
