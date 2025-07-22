@@ -14,3 +14,4 @@ export { default as Spacer } from 'src/components/spacer';
 export { default as Text, TextType } from 'src/components/text';
 export { default as IconRound } from 'src/components/icon-round';
 export { default as StorybookView } from 'src/components/storybook-view';
+export { default as SelectionGroup } from 'src/components/selection-group';

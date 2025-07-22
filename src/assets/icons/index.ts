@@ -17,6 +17,8 @@ export { default as ItauIcon } from 'src/assets/icons/itau';
 export { default as MoneyPathIcon } from 'src/assets/icons/money-path';
 export { default as MoneyIcon } from 'src/assets/icons/money';
 export { default as NubankIcon } from 'src/assets/icons/nubank';
+export { default as RadioCheckedIcon } from 'src/assets/icons/radio-checked';
+export { default as RadioUncheckedIcon } from 'src/assets/icons/radio-unchecked';
 export { default as SantanderIcon } from 'src/assets/icons/santander';
 export { default as TransportIcon } from 'src/assets/icons/transport';
 export { default as WalletIcon } from 'src/assets/icons/wallet';
