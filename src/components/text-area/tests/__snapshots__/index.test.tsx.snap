@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextArea renders correctly 1`] = `
+<View
+  style={
+    {
+      "alignItems": "flex-start",
+      "backgroundColor": "#232E38",
+      "borderColor": "#FFFFFF33",
+      "borderRadius": 8,
+      "borderWidth": 1,
+      "flexDirection": "row",
+      "minHeight": 100,
+      "paddingHorizontal": 16,
+      "width": "100%",
+    }
+  }
+>
+  <TextInput
+    editable={true}
+    multiline={true}
+    onBlur={[Function]}
+    onFocus={[Function]}
+    placeholderTextColor="#FFFFFF65"
+    selectTextOnFocus={true}
+    style={
+      {
+        "color": "#D9D9D9",
+        "minHeight": 76,
+        "paddingVertical": 12,
+        "width": "100%",
+      }
+    }
+    textAlignVertical="top"
+  />
+</View>
+`;

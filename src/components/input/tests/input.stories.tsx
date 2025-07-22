@@ -1,12 +1,19 @@
 import React from 'react';
-import type {Meta, StoryObj} from '@storybook/react';
-import {Input, StorybookView, Text, TextType} from 'src/components';
+import type { Meta, StoryObj } from '@storybook/react';
+import { Input, StorybookView, Text, TextType } from 'src/components';
 
 const InputMeta: Meta<typeof Input> = {
   title: 'Components/Input',
   component: Input,
+  parameters: {
+    controls: {
+      matchers: {
+        color: false,
+      },
+    },
+  },
   argTypes: {
-    onChangeText: {action: 'on change text'},
+    onChangeText: { action: 'on change text' },
   },
   args: {
     placeholder: 'Input Text',
@@ -34,7 +41,7 @@ export const Disabled: StoryObj<typeof Input> = {
 export const WithSuffix: StoryObj<typeof Input> = {
   args: {
     suffix: (
-      <Text type={TextType.textBold} style={{marginHorizontal: 4}}>
+      <Text type={TextType.textMediumSemiBold} style={{ marginHorizontal: 4 }}>
         R$
       </Text>
     ),

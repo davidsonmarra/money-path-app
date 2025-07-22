@@ -15,21 +15,26 @@ import {
   Spacer,
   Text,
   TextType,
+  TextArea,
 } from 'src/components';
 import useStyles from './styles';
 
 interface Props {
   title?: string;
+  description?: string;
   onBack: () => void;
   setTitle: (value: string) => void;
+  setDescription: (value: string) => void;
   onConfirm: () => void;
   isDisabled: boolean;
 }
 
 const TitleContainer = ({
   title = '',
+  description = '',
   onBack,
   setTitle,
+  setDescription,
   onConfirm,
   isDisabled,
 }: Props) => {
@@ -57,6 +62,17 @@ const TitleContainer = ({
                 value={title}
                 onChangeText={setTitle}
                 testID="input-title"
+              />
+              <Spacer height={16} />
+              <Text type={TextType.textMediumRegular}>
+                Descrição (opcional):
+              </Text>
+              <Spacer height={8} />
+              <TextArea
+                placeholder="Ex: Pagamento da conta de luz do mês de dezembro"
+                value={description}
+                onChangeText={setDescription}
+                testID="input-description"
               />
             </View>
             <View>

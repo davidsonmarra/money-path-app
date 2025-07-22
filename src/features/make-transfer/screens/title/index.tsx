@@ -33,7 +33,9 @@ const TitleScreen = () => {
       onBack={navigation.goBack}
       onConfirm={handleOnConfirm}
       setTitle={value => setValue('title', value)}
+      setDescription={value => setValue('description', value)}
       title={watch('title')}
+      description={watch('description')}
       isDisabled={!handleValidateForm()}
     />
   );

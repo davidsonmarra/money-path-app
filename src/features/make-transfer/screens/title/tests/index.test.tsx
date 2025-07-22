@@ -24,7 +24,9 @@ describe('TitleScreen', () => {
     const { getByText, getByTestId } = render(<TitleScreen />);
 
     expect(getByText('Digite o título')).toBeTruthy();
+    expect(getByText('Descrição (opcional):')).toBeTruthy();
     expect(getByTestId('input-title')).toBeTruthy();
+    expect(getByTestId('input-description')).toBeTruthy();
     expect(getByTestId('btn-confirm')).toBeTruthy();
   });
 

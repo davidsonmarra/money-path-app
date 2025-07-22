@@ -268,6 +268,80 @@ exports[`TitleContainer should render correctly with default props 1`] = `
             value=""
           />
         </View>
+        <View
+          style={
+            {
+              "height": 16,
+              "width": 0,
+            }
+          }
+          testID="spacer"
+        />
+        <Text
+          style={
+            [
+              [
+                {
+                  "color": "#D9D9D9",
+                  "fontSize": 14,
+                  "lineHeight": 20,
+                },
+                {
+                  "fontWeight": 400,
+                },
+              ],
+              undefined,
+            ]
+          }
+        >
+          Descrição (opcional):
+        </Text>
+        <View
+          style={
+            {
+              "height": 8,
+              "width": 0,
+            }
+          }
+          testID="spacer"
+        />
+        <View
+          style={
+            {
+              "alignItems": "flex-start",
+              "backgroundColor": "#232E38",
+              "borderColor": "#FFFFFF33",
+              "borderRadius": 8,
+              "borderWidth": 1,
+              "flexDirection": "row",
+              "minHeight": 100,
+              "paddingHorizontal": 16,
+              "width": "100%",
+            }
+          }
+        >
+          <TextInput
+            editable={true}
+            multiline={true}
+            onBlur={[Function]}
+            onChangeText={[MockFunction]}
+            onFocus={[Function]}
+            placeholder="Ex: Pagamento da conta de luz do mês de dezembro"
+            placeholderTextColor="#FFFFFF65"
+            selectTextOnFocus={true}
+            style={
+              {
+                "color": "#D9D9D9",
+                "minHeight": 76,
+                "paddingVertical": 12,
+                "width": "100%",
+              }
+            }
+            testID="input-description"
+            textAlignVertical="top"
+            value=""
+          />
+        </View>
       </View>
       <View>
         <View
@@ -275,7 +349,7 @@ exports[`TitleContainer should render correctly with default props 1`] = `
             {
               "busy": undefined,
               "checked": undefined,
-              "disabled": true,
+              "disabled": false,
               "expanded": undefined,
               "selected": undefined,
             }
@@ -290,7 +364,7 @@ exports[`TitleContainer should render correctly with default props 1`] = `
           }
           accessible={true}
           collapsable={false}
-          focusable={false}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -301,7 +375,7 @@ exports[`TitleContainer should render correctly with default props 1`] = `
           style={
             {
               "alignItems": "center",
-              "backgroundColor": "#4F4F4F",
+              "backgroundColor": "#EAC43D",
               "borderRadius": 12,
               "flexDirection": "row",
               "height": 48,
@@ -612,6 +686,80 @@ exports[`TitleContainer should render correctly with title 1`] = `
             value="Teste de título"
           />
         </View>
+        <View
+          style={
+            {
+              "height": 16,
+              "width": 0,
+            }
+          }
+          testID="spacer"
+        />
+        <Text
+          style={
+            [
+              [
+                {
+                  "color": "#D9D9D9",
+                  "fontSize": 14,
+                  "lineHeight": 20,
+                },
+                {
+                  "fontWeight": 400,
+                },
+              ],
+              undefined,
+            ]
+          }
+        >
+          Descrição (opcional):
+        </Text>
+        <View
+          style={
+            {
+              "height": 8,
+              "width": 0,
+            }
+          }
+          testID="spacer"
+        />
+        <View
+          style={
+            {
+              "alignItems": "flex-start",
+              "backgroundColor": "#232E38",
+              "borderColor": "#FFFFFF33",
+              "borderRadius": 8,
+              "borderWidth": 1,
+              "flexDirection": "row",
+              "minHeight": 100,
+              "paddingHorizontal": 16,
+              "width": "100%",
+            }
+          }
+        >
+          <TextInput
+            editable={true}
+            multiline={true}
+            onBlur={[Function]}
+            onChangeText={[MockFunction]}
+            onFocus={[Function]}
+            placeholder="Ex: Pagamento da conta de luz do mês de dezembro"
+            placeholderTextColor="#FFFFFF65"
+            selectTextOnFocus={true}
+            style={
+              {
+                "color": "#D9D9D9",
+                "minHeight": 76,
+                "paddingVertical": 12,
+                "width": "100%",
+              }
+            }
+            testID="input-description"
+            textAlignVertical="top"
+            value=""
+          />
+        </View>
       </View>
       <View>
         <View
@@ -619,7 +767,7 @@ exports[`TitleContainer should render correctly with title 1`] = `
             {
               "busy": undefined,
               "checked": undefined,
-              "disabled": true,
+              "disabled": false,
               "expanded": undefined,
               "selected": undefined,
             }
@@ -634,7 +782,7 @@ exports[`TitleContainer should render correctly with title 1`] = `
           }
           accessible={true}
           collapsable={false}
-          focusable={false}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -645,7 +793,7 @@ exports[`TitleContainer should render correctly with title 1`] = `
           style={
             {
               "alignItems": "center",
-              "backgroundColor": "#4F4F4F",
+              "backgroundColor": "#EAC43D",
               "borderRadius": 12,
               "flexDirection": "row",
               "height": 48,

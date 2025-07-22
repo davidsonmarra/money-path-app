@@ -6,9 +6,11 @@ describe('TitleContainer', () => {
   const mockProps = {
     onBack: jest.fn(),
     setTitle: jest.fn(),
+    setDescription: jest.fn(),
     onConfirm: jest.fn(),
     title: '',
-    isDisabled: true,
+    description: '',
+    isDisabled: false,
   };
 
   beforeEach(() => {
@@ -55,8 +57,10 @@ describe('TitleContainer', () => {
     expect(mockProps.onConfirm).toHaveBeenCalled();
   });
 
-  it('should disable confirm button when title is empty', () => {
-    const { getByTestId } = render(<TitleContainer {...mockProps} />);
+  it('should disable confirm button when isDisabled is true', () => {
+    const { getByTestId } = render(
+      <TitleContainer {...mockProps} isDisabled={true} />,
+    );
 
     const confirmButton = getByTestId('btn-confirm');
     expect(confirmButton.props.accessibilityState.disabled).toBe(true);
@@ -80,6 +84,7 @@ describe('TitleContainer', () => {
         'Para criar uma transferência, precisamos que você digite um título para identificá-la:',
       ),
     ).toBeTruthy();
+    expect(getByText('Descrição (opcional):')).toBeTruthy();
     expect(getByText('Continuar')).toBeTruthy();
   });
 
@@ -97,5 +102,32 @@ describe('TitleContainer', () => {
 
     const input = getByTestId('input-title');
     expect(input.props.value).toBe('Título de teste');
+  });
+
+  it('should call setDescription when description text changes', () => {
+    const { getByTestId } = render(<TitleContainer {...mockProps} />);
+
+    const textArea = getByTestId('input-description');
+    fireEvent.changeText(textArea, 'Nova descrição');
+
+    expect(mockProps.setDescription).toHaveBeenCalledWith('Nova descrição');
+  });
+
+  it('should display description with correct placeholder', () => {
+    const { getByTestId } = render(<TitleContainer {...mockProps} />);
+
+    const textArea = getByTestId('input-description');
+    expect(textArea.props.placeholder).toBe(
+      'Ex: Pagamento da conta de luz do mês de dezembro',
+    );
+  });
+
+  it('should display description with correct value', () => {
+    const { getByTestId } = render(
+      <TitleContainer {...mockProps} description="Descrição de teste" />,
+    );
+
+    const textArea = getByTestId('input-description');
+    expect(textArea.props.value).toBe('Descrição de teste');
   });
 });

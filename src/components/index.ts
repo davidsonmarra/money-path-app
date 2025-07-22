@@ -7,6 +7,7 @@ export {
 export { default as Feedback, FeedbackType } from 'src/components/feedback';
 export { default as Header } from 'src/components/header';
 export { default as Input } from 'src/components/input';
+export { default as TextArea } from 'src/components/text-area';
 export { default as ListItem } from 'src/components/list-item';
 export { default as ProfileHeader } from 'src/components/profile-header';
 export { default as Spacer } from 'src/components/spacer';
