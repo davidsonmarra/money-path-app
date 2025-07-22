@@ -16,8 +16,8 @@ const TitleScreen = () => {
   const navigation = useNavigation<MakeTransferScreenNavigationProp>();
 
   const handleOnConfirm = () => {
-    navigation.navigate('AddWalletStack', {
-      screen: 'InitialValue',
+    navigation.navigate('MakeTransferStack', {
+      screen: 'Type',
     });
   };
 
