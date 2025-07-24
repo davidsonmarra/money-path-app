@@ -2,6 +2,7 @@ import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { IconRound, StorybookView } from 'src/components';
 import { IconType } from 'src/assets/icons/types';
+import { View } from 'react-native';
 
 const IconRoundMeta: Meta<typeof IconRound> = {
   title: 'Components/IconRound',
@@ -68,7 +69,7 @@ export const LargeRoundSize: StoryObj<typeof IconRound> = {
 
 export const DifferentRoundSizes: StoryObj<typeof IconRound> = {
   render: () => (
-    <div
+    <View
       style={{
         display: 'flex',
         gap: '16px',
@@ -100,18 +101,18 @@ export const DifferentRoundSizes: StoryObj<typeof IconRound> = {
         roundSize={80}
         size={40}
       />
-    </div>
+    </View>
   ),
 };
 
 export const DifferentIcons: StoryObj<typeof IconRound> = {
   render: () => (
-    <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
+    <View style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
       <IconRound icon={IconType.wallet} backgroundColor="#2A5C99" />
       <IconRound icon={IconType.bank} backgroundColor="#FF6A00" />
       <IconRound icon={IconType.money} backgroundColor="#820AD1" />
       <IconRound icon={IconType.nubank} backgroundColor="#EA1D25" />
       <IconRound icon={IconType.santander} backgroundColor="#EA7100" />
-    </div>
+    </View>
   ),
 };

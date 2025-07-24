@@ -5,13 +5,6 @@ import { TextArea, StorybookView, Text, TextType } from 'src/components';
 const TextAreaMeta: Meta<typeof TextArea> = {
   title: 'Components/TextArea',
   component: TextArea,
-  parameters: {
-    controls: {
-      matchers: {
-        color: false,
-      },
-    },
-  },
   argTypes: {
     onChangeText: { action: 'on change text' },
   },

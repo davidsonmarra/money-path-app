@@ -2,7 +2,8 @@ import React from 'react';
 import { ActivityIndicator, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { CloseIcon } from 'src/assets/icons';
-import { Feedback, FeedbackType, Header } from 'src/components';
+import Feedback, { FeedbackType } from 'src/components/feedback';
+import Header from 'src/components/header';
 import useStyles from 'src/features/add-wallet/screens/feedback/ui/styles';
 import { useTheme } from 'src/hooks/useTheme';
 

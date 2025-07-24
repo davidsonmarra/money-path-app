@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text as RNText, TextProps} from 'react-native';
+import { Text as RNText, TextProps } from 'react-native';
 import useStyles from 'src/components/text/styles';
 
 export enum TextType {
@@ -28,27 +28,29 @@ interface Props extends TextProps {
   type: TextType;
 }
 
-const Text = ({children, type, style, ...rest}: Props) => {
+const Text = ({ children, type, style, ...rest }: Props) => {
+  const styles = useStyles();
+
   const textStyle = {
-    [TextType.textSmallRegular]: [useStyles().small, useStyles().regular],
-    [TextType.textSmallMedium]: [useStyles().small, useStyles().mediumW],
-    [TextType.textSmallSemiBold]: [useStyles().small, useStyles().semiBold],
-    [TextType.textSmallHyperlink]: [useStyles().small, useStyles().hyperlink],
-    [TextType.textSmallOverline]: [useStyles().small, useStyles().overline],
-    [TextType.textMediumRegular]: [useStyles().medium, useStyles().regular],
-    [TextType.textMediumMedium]: [useStyles().medium, useStyles().mediumW],
-    [TextType.textMediumSemiBold]: [useStyles().medium, useStyles().semiBold],
-    [TextType.textMediumHyperlink]: [useStyles().medium, useStyles().hyperlink],
-    [TextType.textMediumOverline]: [useStyles().medium, useStyles().overline],
-    [TextType.textLargeRegular]: [useStyles().large, useStyles().regular],
-    [TextType.textLargeMedium]: [useStyles().large, useStyles().mediumW],
-    [TextType.textLargeSemiBold]: [useStyles().large, useStyles().semiBold],
-    [TextType.textLargeHyperlink]: [useStyles().large, useStyles().hyperlink],
-    [TextType.textLargeOverline]: [useStyles().large, useStyles().overline],
-    [TextType.headingXSmall]: useStyles().headingXSmall,
-    [TextType.headingSmall]: useStyles().headingSmall,
-    [TextType.headingMedium]: useStyles().headingMedium,
-    [TextType.headingLarge]: useStyles().headingLarge,
+    [TextType.textSmallRegular]: [styles.small, styles.regular],
+    [TextType.textSmallMedium]: [styles.small, styles.mediumW],
+    [TextType.textSmallSemiBold]: [styles.small, styles.semiBold],
+    [TextType.textSmallHyperlink]: [styles.small, styles.hyperlink],
+    [TextType.textSmallOverline]: [styles.small, styles.overline],
+    [TextType.textMediumRegular]: [styles.medium, styles.regular],
+    [TextType.textMediumMedium]: [styles.medium, styles.mediumW],
+    [TextType.textMediumSemiBold]: [styles.medium, styles.semiBold],
+    [TextType.textMediumHyperlink]: [styles.medium, styles.hyperlink],
+    [TextType.textMediumOverline]: [styles.medium, styles.overline],
+    [TextType.textLargeRegular]: [styles.large, styles.regular],
+    [TextType.textLargeMedium]: [styles.large, styles.mediumW],
+    [TextType.textLargeSemiBold]: [styles.large, styles.semiBold],
+    [TextType.textLargeHyperlink]: [styles.large, styles.hyperlink],
+    [TextType.textLargeOverline]: [styles.large, styles.overline],
+    [TextType.headingXSmall]: styles.headingXSmall,
+    [TextType.headingSmall]: styles.headingSmall,
+    [TextType.headingMedium]: styles.headingMedium,
+    [TextType.headingLarge]: styles.headingLarge,
   };
 
   return (

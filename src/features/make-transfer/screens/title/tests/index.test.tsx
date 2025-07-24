@@ -39,8 +39,8 @@ describe('TitleScreen', () => {
     fireEvent.changeText(input, 'Teste de título');
     fireEvent.press(confirmButton);
 
-    expect(mockNavigate).toHaveBeenCalledWith('AddWalletStack', {
-      screen: 'InitialValue',
+    expect(mockNavigate).toHaveBeenCalledWith('MakeTransferStack', {
+      screen: 'Type',
     });
   });
 

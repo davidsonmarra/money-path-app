@@ -3,6 +3,7 @@ export { default as BackIcon } from 'src/assets/icons/back';
 export { default as BancoDoBrasilIcon } from 'src/assets/icons/banco-do-brasil';
 export { default as BankIcon } from 'src/assets/icons/bank';
 export { default as CheckIcon } from 'src/assets/icons/check';
+export { default as ChevronDownIcon } from 'src/assets/icons/chevron-down';
 export { default as ChevronRightIcon } from 'src/assets/icons/chevron-right';
 export { default as CloseIcon } from 'src/assets/icons/close';
 export { default as ErrorIcon } from 'src/assets/icons/error';

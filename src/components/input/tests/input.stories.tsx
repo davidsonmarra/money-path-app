@@ -5,13 +5,6 @@ import { Input, StorybookView, Text, TextType } from 'src/components';
 const InputMeta: Meta<typeof Input> = {
   title: 'Components/Input',
   component: Input,
-  parameters: {
-    controls: {
-      matchers: {
-        color: false,
-      },
-    },
-  },
   argTypes: {
     onChangeText: { action: 'on change text' },
   },

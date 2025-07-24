@@ -1,12 +1,12 @@
 import React from 'react';
-import {TouchableOpacityProps} from 'react-native';
-import {Button, ButtonType} from 'src/components';
-import {GoogleIcon} from 'src/assets/icons';
+import { TouchableOpacityProps } from 'react-native';
+import Button, { ButtonType } from 'src/components/button';
+import { GoogleIcon } from 'src/assets/icons';
 import getStyles from 'src/features/login/components/google-button/styles';
 
 type Props = TouchableOpacityProps;
 
-const GoogleButton = ({onPress}: Props) => {
+const GoogleButton = ({ onPress }: Props) => {
   return (
     <Button
       onPress={onPress}

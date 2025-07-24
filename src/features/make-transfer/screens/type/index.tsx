@@ -40,7 +40,7 @@ const TypeScreen = () => {
 
   const handleOnConfirm = () => {
     navigation.navigate('MakeTransferStack', {
-      screen: 'Category',
+      screen: 'Amount',
     });
   };
 

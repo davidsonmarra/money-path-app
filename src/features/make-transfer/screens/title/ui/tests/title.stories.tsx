@@ -7,13 +7,6 @@ const TitleContainerMeta: Meta<typeof TitleContainer> = {
   title: 'Screens/MakeTransfer/Title',
   component: TitleContainer,
   decorators: [Story => <Story />],
-  parameters: {
-    controls: {
-      matchers: {
-        color: false,
-      },
-    },
-  },
   argTypes: {
     onBack: { control: false },
     setTitle: { control: false },
