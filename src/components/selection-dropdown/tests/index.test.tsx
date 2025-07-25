@@ -122,4 +122,65 @@ describe('SelectionDropdown', () => {
     const selectedItemElement = getByTestId('dropdown-item-2');
     expect(selectedItemElement).toBeTruthy();
   });
+
+  it('should show icon when showIcon prop is true and item is selected', () => {
+    const selectedItem = mockItems[0];
+    const { getByTestId } = render(
+      <SelectionDropdown
+        items={mockItems}
+        selectedItem={selectedItem}
+        onSelectedItem={mockOnSelectedItem}
+        showIcon={true}
+        testID="dropdown"
+      />,
+    );
+
+    // Should show icon in the main container
+    expect(getByTestId('icon-wallet')).toBeTruthy();
+  });
+
+  it('should show icon when showIcon prop is true and no item is selected', () => {
+    const { getByTestId } = render(
+      <SelectionDropdown
+        items={mockItems}
+        onSelectedItem={mockOnSelectedItem}
+        showIcon={true}
+        testID="dropdown"
+      />,
+    );
+
+    // Should show icon in the main container (placeholder state)
+    expect(getByTestId('icon-wallet')).toBeTruthy();
+  });
+
+  it('should show icons in dropdown items when showIcon prop is true', () => {
+    const { getByTestId, queryAllByTestId } = render(
+      <SelectionDropdown
+        items={mockItems}
+        onSelectedItem={mockOnSelectedItem}
+        showIcon={true}
+        testID="dropdown"
+      />,
+    );
+
+    const dropdown = getByTestId('dropdown');
+    fireEvent.press(dropdown);
+
+    const icons = queryAllByTestId('icon-wallet');
+    expect(icons.length).toBe(mockItems.length + 1);
+  });
+
+  it('should not show icon when showIcon prop is false', () => {
+    const { queryByTestId } = render(
+      <SelectionDropdown
+        items={mockItems}
+        onSelectedItem={mockOnSelectedItem}
+        showIcon={false}
+        testID="dropdown"
+      />,
+    );
+
+    // Should not show icon in the main container
+    expect(queryByTestId('icon-wallet')).toBeNull();
+  });
 });

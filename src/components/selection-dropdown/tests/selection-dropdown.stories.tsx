@@ -15,9 +15,18 @@ const SelectionDropdownStory = () => {
     SelectionDropdownItem | undefined
   >();
 
+  const [selectedItemWithIcon, setSelectedItemWithIcon] = useState<
+    SelectionDropdownItem | undefined
+  >();
+
   const handleSelectedItem = (item: SelectionDropdownItem) => {
     setSelectedItem(item);
     console.log('Selected:', item);
+  };
+
+  const handleSelectedItemWithIcon = (item: SelectionDropdownItem) => {
+    setSelectedItemWithIcon(item);
+    console.log('Selected with icon:', item);
   };
 
   return (
@@ -43,6 +52,31 @@ const SelectionDropdownStory = () => {
           onSelectedItem={handleSelectedItem}
           placeholder="Dropdown desabilitado"
           disabled={true}
+        />
+
+        <SelectionDropdown
+          items={mockItems}
+          selectedItem={selectedItemWithIcon}
+          onSelectedItem={handleSelectedItemWithIcon}
+          placeholder="Selecione uma carteira (com ícone)"
+          showIcon={true}
+          testID="dropdown-with-icon"
+        />
+
+        <SelectionDropdown
+          items={mockItems}
+          selectedItem={mockItems[2]}
+          onSelectedItem={handleSelectedItemWithIcon}
+          placeholder="Carteira selecionada (com ícone)"
+          showIcon={true}
+        />
+
+        <SelectionDropdown
+          items={mockItems}
+          onSelectedItem={handleSelectedItemWithIcon}
+          placeholder="Dropdown desabilitado (com ícone)"
+          disabled={true}
+          showIcon={true}
         />
       </View>
     </StorybookView>

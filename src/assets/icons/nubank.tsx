@@ -1,11 +1,11 @@
 import React from 'react';
-import Svg, {Path} from 'react-native-svg';
+import Svg, { Path } from 'react-native-svg';
 
 interface Props {
   size?: number;
 }
 
-const NubankIcon = ({size = 48}: Props) => (
+const NubankIcon = ({ size = 48 }: Props) => (
   <Svg width={size} height={size} viewBox="0 0 2500 2500" testID="icon-nubank">
     <Path
       fill="#820ad1"

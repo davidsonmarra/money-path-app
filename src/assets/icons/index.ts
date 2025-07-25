@@ -2,6 +2,7 @@ export { default as AppleIcon } from 'src/assets/icons/apple';
 export { default as BackIcon } from 'src/assets/icons/back';
 export { default as BancoDoBrasilIcon } from 'src/assets/icons/banco-do-brasil';
 export { default as BankIcon } from 'src/assets/icons/bank';
+export { default as ChangeIcon } from 'src/assets/icons/change';
 export { default as CheckIcon } from 'src/assets/icons/check';
 export { default as ChevronDownIcon } from 'src/assets/icons/chevron-down';
 export { default as ChevronRightIcon } from 'src/assets/icons/chevron-right';

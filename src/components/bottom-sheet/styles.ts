@@ -12,6 +12,7 @@ const useStyles = ({ maxHeight }: Props) => {
     modal: {
       justifyContent: 'flex-end',
       margin: 0,
+      alignItems: 'stretch',
     },
     bottomSheet: {
       backgroundColor: colors.background,
@@ -20,8 +21,8 @@ const useStyles = ({ maxHeight }: Props) => {
       paddingHorizontal: 24,
       paddingTop: 16,
       paddingBottom: 24,
-      minHeight: 300,
       maxHeight,
+      alignSelf: 'stretch',
       shadowColor: '#000',
       shadowOffset: {
         width: 0,
@@ -42,7 +43,7 @@ const useStyles = ({ maxHeight }: Props) => {
       textAlign: 'center',
     },
     content: {
-      flex: 1,
+      flexGrow: 1,
     },
     contentContainer: {
       paddingBottom: 16,

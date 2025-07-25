@@ -1,15 +1,19 @@
 import React, { useCallback, useState } from 'react';
 import { View, TouchableOpacity } from 'react-native';
-import { ChevronDownIcon } from 'src/assets/icons';
+import { ChevronDownIcon, WalletIcon } from 'src/assets/icons';
 import Text, { TextType } from 'src/components/text';
 import BottomSheet from 'src/components/bottom-sheet';
 import useStyles from 'src/components/selection-dropdown/styles';
 import { useTheme } from 'src/hooks/useTheme';
+import renderIcon from 'src/assets/icons/utils';
+import { IconType } from 'src/assets/icons/types';
 
 export interface SelectionDropdownItem {
   id: string;
   label: string;
   value: any;
+  icon?: IconType;
+  iconBackground?: string;
 }
 
 export interface Props {
@@ -19,6 +23,7 @@ export interface Props {
   placeholder?: string;
   disabled?: boolean;
   testID?: string;
+  showIcon?: boolean;
 }
 
 const SelectionDropdown = ({
@@ -28,10 +33,15 @@ const SelectionDropdown = ({
   placeholder = 'Selecione uma opção',
   disabled = false,
   testID,
+  showIcon = false,
 }: Props) => {
   const [isOpen, setIsOpen] = useState(false);
   const { colors } = useTheme().theme;
-  const styles = useStyles({ disabled });
+  const styles = useStyles({
+    disabled,
+    selectedItemIconBackground:
+      selectedItem?.iconBackground ?? colors.background,
+  });
 
   const handlePress = useCallback(() => {
     if (!disabled) {
@@ -62,12 +72,22 @@ const SelectionDropdown = ({
         activeOpacity={0.7}
         testID={testID}
       >
-        <Text
-          type={TextType.textMediumRegular}
-          style={[styles.text, !selectedItem && styles.placeholderText]}
-        >
-          {displayText}
-        </Text>
+        {showIcon ? (
+          <View style={styles.icon}>
+            {renderIcon(selectedItem?.icon ?? IconType.wallet)({
+              size: 32,
+              color: colors.text,
+            })}
+          </View>
+        ) : (
+          <Text
+            type={TextType.textMediumRegular}
+            style={[styles.text, !selectedItem && styles.placeholderText]}
+          >
+            {displayText}
+          </Text>
+        )}
+
         <ChevronDownIcon
           size={20}
           color={disabled ? colors.disabled : colors.text}
@@ -91,6 +111,19 @@ const SelectionDropdown = ({
               onPress={() => handleSelectItem(item)}
               testID={`dropdown-item-${item.id}`}
             >
+              {showIcon && (
+                <View
+                  style={[
+                    styles.itemIcon,
+                    { backgroundColor: item.iconBackground },
+                  ]}
+                >
+                  {renderIcon(item.icon ?? IconType.wallet)({
+                    size: 24,
+                    color: colors.text,
+                  })}
+                </View>
+              )}
               <Text
                 type={TextType.textMediumRegular}
                 style={[

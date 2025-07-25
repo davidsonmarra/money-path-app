@@ -3,14 +3,14 @@ import { useTheme } from 'src/hooks/useTheme';
 
 interface Props {
   disabled: boolean;
+  selectedItemIconBackground: string;
 }
 
-const useStyles = ({ disabled }: Props) => {
+const useStyles = ({ disabled, selectedItemIconBackground }: Props) => {
   const { colors } = useTheme().theme;
 
   return StyleSheet.create({
     container: {
-      width: '100%',
       borderRadius: 8,
       borderWidth: 1,
       backgroundColor: disabled ? colors.inputDisabled : colors.background,
@@ -18,9 +18,9 @@ const useStyles = ({ disabled }: Props) => {
       flexDirection: 'row',
       alignItems: 'center',
       justifyContent: 'space-between',
-      paddingHorizontal: 16,
-      paddingVertical: 12,
+      padding: 12,
       minHeight: 48,
+      gap: 16,
     },
     text: {
       color: colors.text,
@@ -28,6 +28,14 @@ const useStyles = ({ disabled }: Props) => {
     },
     placeholderText: {
       color: colors.placeholder,
+    },
+    icon: {
+      backgroundColor: selectedItemIconBackground,
+      width: 48,
+      height: 48,
+      borderRadius: 50,
+      alignItems: 'center',
+      justifyContent: 'center',
     },
     itemsContainer: {
       paddingHorizontal: 16,
@@ -40,6 +48,8 @@ const useStyles = ({ disabled }: Props) => {
       backgroundColor: colors.background,
       borderWidth: 1,
       borderColor: colors.divider,
+      flexDirection: 'row',
+      alignItems: 'center',
     },
     selectedItem: {
       backgroundColor: colors.successLight,
@@ -47,6 +57,15 @@ const useStyles = ({ disabled }: Props) => {
     },
     itemText: {
       color: colors.text,
+      flex: 1,
+    },
+    itemIcon: {
+      marginRight: 8,
+      width: 32,
+      height: 32,
+      borderRadius: 50,
+      alignItems: 'center',
+      justifyContent: 'center',
     },
     selectedItemText: {
       color: colors.success,

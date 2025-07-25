@@ -4,6 +4,7 @@ export enum IconType {
   bancoDoBrasil = 'bancoDoBrasil',
   bank = 'bank',
   check = 'check',
+  change = 'change',
   chevronRight = 'chevronRight',
   close = 'close',
   error = 'error',

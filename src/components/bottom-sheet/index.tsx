@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, ScrollView, DimensionValue } from 'react-native';
+import { View, DimensionValue } from 'react-native';
 import Modal from 'react-native-modal';
 import Text, { TextType } from 'src/components/text';
 import useStyles from 'src/components/bottom-sheet/styles';
@@ -43,13 +43,7 @@ const BottomSheet = ({
             {title}
           </Text>
         </View>
-        <ScrollView
-          style={styles.content}
-          showsVerticalScrollIndicator={false}
-          contentContainerStyle={styles.contentContainer}
-        >
-          {children}
-        </ScrollView>
+        <View style={styles.content}>{children}</View>
       </View>
     </Modal>
   );
